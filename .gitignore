@@ -242,3 +242,5 @@ ModelManifest.xml
 .fake/
 /ASP.NET Core/03 - WebAPI/Projetos/01 MinhaAPICompleta 3.1/API/MinhaAPICompleta.sln.DotSettings.zip
 /ASP.NET Core/04 - Enterprise Applications/Projetos/Instrutor/NerdStoreEnterprise/ComunicacaoFilaIdentidadeCliente.rar
+
+/.vscode
