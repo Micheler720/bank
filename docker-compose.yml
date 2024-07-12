@@ -1,0 +1,8 @@
+services:
+  rabbitMq:
+    image: rabbitmq:3-management
+    container_name: bank.rabbitMq
+    ports:
+     - "15672:15672"
+     - "5672:5672"
+    restart: always
