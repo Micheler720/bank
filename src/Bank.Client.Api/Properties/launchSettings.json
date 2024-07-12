@@ -16,7 +16,10 @@
       "launchUrl": "swagger",
       "applicationUrl": "http://localhost:5181",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "RABBITMQ_HOST": "127.0.0.1",
+        "RABBITMQ_USER": "guest",
+        "RABBITMQ_PASSWORD": "guest",
       }
     },
     "https": {
@@ -26,7 +29,10 @@
       "launchUrl": "swagger",
       "applicationUrl": "https://localhost:7199;http://localhost:5181",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "RABBITMQ_HOST": "127.0.0.1",
+        "RABBITMQ_USER": "guest",
+        "RABBITMQ_PASSWORD": "guest",
       }
     },
     "IIS Express": {
@@ -34,7 +40,10 @@
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "RABBITMQ_HOST": "127.0.0.1",
+        "RABBITMQ_USER": "guest",
+        "RABBITMQ_PASSWORD": "guest",
       }
     }
   }
