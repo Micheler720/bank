@@ -1,8 +1,8 @@
 using System.Reflection;
-using Bank.Client.Api.Attributes;
+using Bank.Clients.Api.Attributes;
 using Serilog;
 
-namespace Bank.Client.Api.Configurations;
+namespace Bank.Clients.Api.Configurations;
 public static class ApiConfig
 {
     public static IServiceCollection AddApiConfig(this IServiceCollection services, IConfiguration configuration)

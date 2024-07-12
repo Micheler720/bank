@@ -1,7 +1,7 @@
 using Bank.Core.Messages;
 using FluentValidation;
 
-namespace Bank.Client.Api.Application.Commands;
+namespace Bank.Clients.Api.Application.Commands;
 
 public class AddClientCommand : Command
 {

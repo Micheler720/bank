@@ -1,7 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.OpenApi.Models;
 
-namespace Bank.Client.Api.Configurations;
+namespace Bank.Clients.Api.Configurations;
 
 [ExcludeFromCodeCoverage]
 public static class SwaggerConfig

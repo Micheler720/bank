@@ -2,7 +2,7 @@ using System.Net;
 using Bank.Core.Communication;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Bank.Client.Api.Controllers.v1;
+namespace Bank.Clients.Api.Controllers.v1;
 
 [ApiController]
 [Route("api/v1/clients")]

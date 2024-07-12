@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace Bank.Client.Api.Controllers;
+namespace Bank.Clients.Api.Controllers;
 public abstract class MainController : ControllerBase
 {
     protected ICollection<string> Errors = new List<string>();

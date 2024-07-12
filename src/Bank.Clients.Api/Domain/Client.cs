@@ -1,6 +1,6 @@
 using Bank.Core.DomainObjects;
 
-namespace Bank.Client.Api.Domain.Client;
+namespace Bank.Clients.Api.Domain.Client;
 
 public class Client : Entity
 {
