@@ -7,6 +7,8 @@ var services = builder.Services;
 services.AddApiConfig(configuration);
 services.AddSwaggerConfiguration();
 services.AddMessageConfig();
+services.AddDependecyResolver();
+services.AddDatabaseConfiguration();
 
 var app = builder.Build();
 
