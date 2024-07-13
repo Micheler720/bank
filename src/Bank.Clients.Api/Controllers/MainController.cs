@@ -1,3 +1,4 @@
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
@@ -6,7 +7,7 @@ public abstract class MainController : ControllerBase
 {
     protected ICollection<string> Errors = new List<string>();
 
-    protected ActionResult CustomResponse(object result = null)
+    protected ActionResult CustomResponse(object? result = null)
     {
         if (ValidOperation())
         {
@@ -29,7 +30,17 @@ public abstract class MainController : ControllerBase
 
         return CustomResponse();
     }
-    
+
+    protected ActionResult CustomResponse(ValidationResult validationResult)
+    {
+        foreach (var error in validationResult.Errors)
+        {
+            AddErrorToStack(error.ErrorMessage);
+        }
+
+        return CustomResponse();
+    }
+
     protected bool ValidOperation()
     {
         return !Errors.Any();

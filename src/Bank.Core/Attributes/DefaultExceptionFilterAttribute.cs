@@ -3,7 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Serilog;
 
-namespace Bank.Client.Api.Attributes;
+namespace Bank.Clients.Api.Attributes;
+
 public class DefaultExceptionFilterAttribute : ExceptionFilterAttribute
 {
     private const string DEFAULT_EXCEPTION = "Ocorreu um erro inesperado.";

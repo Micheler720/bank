@@ -10,6 +10,12 @@ public class AddClientCommand : Command
     public string? Document { get; set; }
     public string? Email { get; set; }
     public float CreditLimit { get; set; }
+
+    public override bool IsValid()
+    {
+        ValidationResult = new AddClientCommandValidation().Validate(this);
+        return ValidationResult.IsValid;
+    }
 }
 
 public class AddClientCommandValidation : AbstractValidator<AddClientCommand>
