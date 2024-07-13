@@ -1,9 +1,11 @@
 using Bank.Clients.Api.Domain;
 using Bank.Core.Messages;
+using Bank.Core.Messages.Integration;
 using FluentValidation.Results;
 using MediatR;
 
 namespace Bank.Clients.Api.Application.Commands;
+
 public class ClientCommandHandler(IClientRepository clientRepository) : CommandHandler,
     IRequestHandler<AddClientCommand, ValidationResult>
 {
@@ -19,6 +21,15 @@ public class ClientCommandHandler(IClientRepository clientRepository) : CommandH
             email: request.Email!);
 
         _clientRepository.Add(client);
+
+        var clienteRegistred = new ClientRegistredEvent
+        (
+            name: request.Name!,
+            id: client.Id,
+            creditLimit: request.CreditLimit
+        );
+
+        client.AddEvent(clienteRegistred);
 
         return await PersistData(_clientRepository.UnitOfWork); 
     }

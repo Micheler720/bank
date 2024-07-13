@@ -1,4 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
+using Bank.Proposals.Worker.Services;
 using MassTransit;
 
 namespace Bank.Clients.Api.Configurations;
@@ -14,11 +15,25 @@ public static class MessageConfiguration
 
         services.AddMassTransit(x =>
         {
-            x.UsingRabbitMq((context,cfg) =>
+            x.AddConsumer<ClientRegistredConsumer>(); 
+
+            x.UsingRabbitMq((context, cfg) =>
             {
-                cfg.Host(host, "/", h => {
+                cfg.Host(host, "/", h =>
+                {
                     h.Username(user);
                     h.Password(password);
+                });
+
+                cfg.ReceiveEndpoint("client-registred-queue", e =>
+                {
+                    e.ConfigureConsumeTopology = false;
+                    e.AutoDelete = false;
+                    e.Durable = true;
+                    e.PrefetchCount = 10;
+                    e.UseMessageRetry(r => r.Interval(5, TimeSpan.FromSeconds(60)));
+                    
+                    e.ConfigureConsumer<ClientRegistredConsumer>(context);
                 });
 
                 cfg.ConfigureEndpoints(context);

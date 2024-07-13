@@ -1,4 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
+using Bank.Core.Messages.Integration;
 using MassTransit;
 
 namespace Bank.Clients.Api.Configurations;
@@ -14,15 +15,18 @@ public static class MessageConfiguration
 
         services.AddMassTransit(x =>
         {
-            x.UsingRabbitMq((context,cfg) =>
+            x.UsingRabbitMq((context, cfg) =>
             {
-                cfg.Host(host, "/", h => {
+                cfg.Host(host, "/", h =>
+                {
                     h.Username(user);
                     h.Password(password);
+                    h.PublisherConfirmation = true;
                 });
 
                 cfg.ConfigureEndpoints(context);
             });
         });
+
     }
 }
