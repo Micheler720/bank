@@ -19,7 +19,7 @@ public abstract class CommandHandler
 
     protected async Task<ValidationResult> PersistData(IUnitOfWork uow)
     {
-        if (!await uow.Commit()) AddError("An error occurred while trying to persist data");
+        if (!await uow.CommitAsync()) AddError("An error occurred while trying to persist data");
 
         return ValidationResult;
     }

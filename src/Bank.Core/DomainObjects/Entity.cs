@@ -4,14 +4,16 @@ namespace Bank.Core.DomainObjects;
 public class Entity
 {
     public Guid Id { get; set; }
+    public DateTime CreatedDate { get; set; }
+    public DateTime UpdatedDate { get; set; }  
 
     protected Entity()
     {
         Id = Guid.NewGuid();
     }
 
-    private List<Event> _events;
-    public IReadOnlyCollection<Event> Notificacoes => _events?.AsReadOnly();
+    private List<Event>? _events;
+    public IReadOnlyCollection<Event>? Notificacoes => _events?.AsReadOnly();
 
     public void AddEvent(Event @event)
     {

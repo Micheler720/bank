@@ -1,6 +1,7 @@
 namespace Bank.Core.Data; 
 
-public class IRepository
+public interface IRepository
 {
+    IUnitOfWork UnitOfWork { get; }
 
 }

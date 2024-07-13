@@ -6,3 +6,13 @@ services:
      - "15672:15672"
      - "5672:5672"
     restart: always
+  bank.db:
+    image: postgres
+    container_name: bank.db
+    volumes:
+      - ./docker/database:/var/lib/postgresql/data
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=Bank@2024
+    ports:
+      - "5433:5432"
