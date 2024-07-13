@@ -29,7 +29,7 @@ public static class SwaggerConfig
         app.UseSwagger();
         app.UseSwaggerUI(c =>
         {
-            c.SwaggerEndpoint("/swagger/v1/swagger.json", "Bank.Client.Api v1");
+            c.SwaggerEndpoint("/swagger/v1/swagger.json", "Bank.Clients.Api v1");
         });
         return app;
     }
