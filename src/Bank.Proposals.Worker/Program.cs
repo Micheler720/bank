@@ -1,5 +1,5 @@
-using Bank.Clients.Api.Configurations;
 using Bank.Proposals.Configurations;
+using Bank.Proposals.Worker.Configurations;
 
 var builder = WebApplication.CreateBuilder(args);
 

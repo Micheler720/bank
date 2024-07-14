@@ -1,19 +1,26 @@
+using Bank.Proposals.Worker.Domain.HttpService;
+using Bank.Proposals.Worker.Domain.Services;
+using Bank.Proposals.Worker.Domain.Services.Interface;
+using Bank.Proposals.Worker.Infrastructure.HttpServices;
+
 namespace Bank.Proposals.Configurations;
 
 public static class DependecyResolveConfig
 {
     public static void AddDependecyResolver(this IServiceCollection services)
     {
-        services.ResolveRepositories();
+        services.ResolveServices();
         services.ResolveHttpServices();
     }
 
-    private static void ResolveRepositories(this IServiceCollection services)
+    private static void ResolveServices(this IServiceCollection services)
     {
+        services.AddScoped<IProposalService, ProposalService>();
     }
 
     private static void ResolveHttpServices(this IServiceCollection services)
     {
+        services.AddScoped<IScoreHttpService, ScoreHttpService>();
     }
 
 }
