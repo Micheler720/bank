@@ -1,4 +1,5 @@
 using Bank.Clients.Api.Configurations;
+using Bank.Message;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
@@ -6,7 +7,7 @@ var services = builder.Services;
 
 services.AddApiConfig(configuration);
 services.AddSwaggerConfiguration();
-services.AddMessageConfig();
+services.AddMessageBus();
 services.AddDependecyResolver();
 services.AddDatabaseConfiguration();
 

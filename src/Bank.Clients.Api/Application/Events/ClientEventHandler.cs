@@ -1,17 +1,17 @@
 using Bank.Core.Messages.Integration;
-using MassTransit;
+using Bank.Message;
 using MediatR;
 
 namespace Bank.Clients.Api.Application.Events;
-public class ClientEventHandler(IBusControl publishEndpoint) : 
+public class ClientEventHandler(IMessageBus messageBus) : 
     INotificationHandler<ClientRegistredEvent>
 {
-    private readonly IBusControl _publishEndpoint = publishEndpoint;
+    private readonly IMessageBus _messageBus = messageBus;
 
     public async Task Handle(
         ClientRegistredEvent notification, 
         CancellationToken cancellationToken)
     {
-        await _publishEndpoint.Publish(notification, cancellationToken);
+        await _messageBus.Publish(notification, cancellationToken);
     }
 }
