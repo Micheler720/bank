@@ -6,6 +6,7 @@ public static class MessageBusConfiguration
 {
     public static IServiceCollection AddMessageBus(
         this IServiceCollection services,
+        List<ProducerConfiguration>? producerConfigurations = null,
         List<ConsumerConfiguration>? consumerConfigs = null)
     {
         var user = Environment.GetEnvironmentVariable("RABBITMQ_USER") ?? "";
@@ -13,6 +14,7 @@ public static class MessageBusConfiguration
         var password = Environment.GetEnvironmentVariable("RABBITMQ_PASSWORD") ?? "";
 
         if (string.IsNullOrEmpty(host)) throw new ArgumentNullException();
+        
 
         services.AddMassTransit(x =>
         {
@@ -30,6 +32,25 @@ public static class MessageBusConfiguration
                     h.PublisherConfirmation = true;
                 });
 
+                producerConfigurations?.ForEach(producer => {
+
+                    cfg.Publish(producer.ProducerType, p =>
+                    {
+                        var exchangeName = producer.QueueName;
+
+                        p.BindQueue(exchangeName, producer.QueueName,e =>
+                        {
+                            e.ExchangeType = "fanout";
+                            e.RoutingKey = nameof(producer.ProducerType);
+                        });
+
+                        cfg.MessageTopology.SetEntityNameFormatter(
+                            new PrefixEntityNameFormatter(cfg.MessageTopology.EntityNameFormatter, exchangeName));
+
+                    });
+
+                });  
+                
                 consumerConfigs?.ForEach(consumer =>
                 {
                     cfg.ReceiveEndpoint(consumer.QueueName, e =>
