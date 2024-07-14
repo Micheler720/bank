@@ -24,9 +24,10 @@ public class ClientCommandHandler(IClientRepository clientRepository) : CommandH
 
         var clienteRegistred = new ClientRegistredEvent
         (
-            name: request.Name!,
-            id: client.Id,
-            creditLimit: request.CreditLimit
+            clientId: client.Id,
+            solicitedLimit: request.SolicitedLimit,
+            document: request.Document!
+
         );
 
         client.AddEvent(clienteRegistred);

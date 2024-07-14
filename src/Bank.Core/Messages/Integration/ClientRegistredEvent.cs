@@ -2,15 +2,15 @@ namespace Bank.Core.Messages.Integration;
 
 public class ClientRegistredEvent : Event
 {
-    public string? Name { get; private set; }
-    public Guid Id { get; private set; }
-    public float CreditLimit { get; private set; }
+    public Guid ClientId { get; private set; }
+    public float SolicitedLimit { get; private set; }
+    public string Document { get; private set; }
     
-    public ClientRegistredEvent(string name, Guid id, float creditLimit)
+    public ClientRegistredEvent(Guid clientId, float solicitedLimit, string document)
     {
-        AggregateId = id;
-        Id = id;
-        Name = name;
-        CreditLimit = creditLimit;
+        AggregateId = clientId;
+        ClientId = clientId;
+        SolicitedLimit = solicitedLimit;
+        Document = document;
     }
 }
