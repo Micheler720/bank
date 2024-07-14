@@ -1,3 +1,4 @@
+using System.Reflection;
 using MassTransit;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -32,24 +33,10 @@ public static class MessageBusConfiguration
                     h.PublisherConfirmation = true;
                 });
 
-                producerConfigurations?.ForEach(producer => {
-
-                    cfg.Publish(producer.ProducerType, p =>
-                    {
-                        var exchangeName = producer.QueueName;
-
-                        p.BindQueue(exchangeName, producer.QueueName,e =>
-                        {
-                            e.ExchangeType = "fanout";
-                            e.RoutingKey = nameof(producer.ProducerType);
-                        });
-
-                        cfg.MessageTopology.SetEntityNameFormatter(
-                            new PrefixEntityNameFormatter(cfg.MessageTopology.EntityNameFormatter, exchangeName));
-
-                    });
-
-                });  
+                producerConfigurations?.ForEach(producer =>
+                {
+                    ConfigureProducer(cfg, producer.QueueName, producer.ProducerType);
+                });
                 
                 consumerConfigs?.ForEach(consumer =>
                 {
@@ -72,5 +59,44 @@ public static class MessageBusConfiguration
         services.AddScoped<IMessageBus, MessageBus>();
 
         return services;
+    }
+
+    private static void ConfigureProducer(
+        IRabbitMqBusFactoryConfigurator cfg, 
+        string queueName,
+        Type messageType)
+    {
+        var method = typeof(MessageBusConfiguration).GetMethod(nameof(ProducerConfiguration), BindingFlags.Static | BindingFlags.NonPublic);
+        var genericMethod = method.MakeGenericMethod(messageType);
+
+        genericMethod.Invoke(null, [cfg, queueName]);
+    }
+
+    private static void ProducerConfiguration<T>(
+        IRabbitMqBusFactoryConfigurator cfg, 
+        string queueName) 
+        where T : class
+    {
+        cfg.Publish<T>(p =>
+        {
+            var exchangeName = p.Exchange.ExchangeName;
+
+            p.BindQueue(exchangeName, queueName,e =>
+            {
+                e.ExchangeType = "fanout";
+                e.RoutingKey = nameof(T);
+            });
+
+            cfg.Publish<T>(c => c.ExchangeType = "fanout");
+
+            cfg.MessageTopology.SetEntityNameFormatter(
+                new PrefixEntityNameFormatter(cfg.MessageTopology.EntityNameFormatter, exchangeName));
+            
+            cfg.Send<T>(c => 
+            {
+                c.UseRoutingKeyFormatter(rk => rk.Message.GetType().Name);
+            });
+
+        });
     }
 }
