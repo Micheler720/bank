@@ -12,8 +12,6 @@ public class ConsumedMessage<T> where T : class
     {
         Message = message.Message;
         Redelivered = message.ReceiveContext.Redelivered;
-        RetryCount = message.GetRetryCount();
+        RetryCount = message.GetRetryCount() + 1;
     }
-
-
 }
