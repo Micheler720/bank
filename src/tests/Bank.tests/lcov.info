@@ -1,0 +1,1737 @@
+SF:/home/michele/repos/banco/src/services/Bank.Clients.Api/Program.cs
+FN:2,System.Void Program::<Main>$(System.String[])
+FNDA:0,System.Void Program::<Main>$(System.String[])
+DA:3,0
+DA:4,0
+DA:5,0
+DA:7,0
+DA:8,0
+DA:9,0
+DA:10,0
+DA:11,0
+DA:13,0
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+DA:20,0
+DA:22,0
+BRDA:15,79,0,0
+BRDA:15,79,1,0
+LF:15
+LH:0
+BRF:2
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/services/Bank.Clients.Api/Services/CreditCardCreatedConsumer.cs
+FN:10,System.Void Bank.Clients.Api.Services.CreditCardCreatedConsumer::.ctor(Bank.Clients.Api.Domain.IClientRepository)
+FNDA:2,System.Void Bank.Clients.Api.Services.CreditCardCreatedConsumer::.ctor(Bank.Clients.Api.Domain.IClientRepository)
+DA:11,2
+DA:12,2
+DA:13,2
+DA:14,2
+FN:16,System.Void Bank.Clients.Api.Services.CreditCardCreatedConsumer/<ConsumeMessage>d__2::MoveNext()
+FNDA:2,System.Void Bank.Clients.Api.Services.CreditCardCreatedConsumer/<ConsumeMessage>d__2::MoveNext()
+DA:17,2
+DA:18,2
+DA:20,2
+DA:21,1
+DA:23,1
+DA:25,1
+DA:27,1
+DA:28,1
+BRDA:20,183,0,1
+BRDA:20,183,1,1
+BRDA:23,203,0,0
+BRDA:23,203,1,1
+LF:12
+LH:12
+BRF:4
+BRH:3
+FNF:2
+FNH:2
+end_of_record
+SF:/home/michele/repos/banco/src/services/Bank.Clients.Api/Services/CreditCardRefusedConsumer.cs
+FN:10,System.Void Bank.Clients.Api.Services.CreditCardRefusedConsumer::.ctor(Bank.Clients.Api.Domain.IClientRepository)
+FNDA:0,System.Void Bank.Clients.Api.Services.CreditCardRefusedConsumer::.ctor(Bank.Clients.Api.Domain.IClientRepository)
+DA:11,0
+DA:12,0
+DA:13,0
+DA:14,0
+FN:16,System.Void Bank.Clients.Api.Services.CreditCardRefusedConsumer/<ConsumeMessage>d__2::MoveNext()
+FNDA:0,System.Void Bank.Clients.Api.Services.CreditCardRefusedConsumer/<ConsumeMessage>d__2::MoveNext()
+DA:17,0
+DA:18,0
+DA:20,0
+DA:21,0
+DA:23,0
+DA:25,0
+DA:27,0
+DA:28,0
+BRDA:20,183,0,0
+BRDA:20,183,1,0
+BRDA:23,203,0,0
+BRDA:23,203,1,0
+LF:12
+LH:0
+BRF:4
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/services/Bank.Clients.Api/Services/ProposalRefusedConsumer.cs
+FN:10,System.Void Bank.Clients.Api.Services.ProposalRefusedConsumer::.ctor(Bank.Clients.Api.Domain.IClientRepository)
+FNDA:0,System.Void Bank.Clients.Api.Services.ProposalRefusedConsumer::.ctor(Bank.Clients.Api.Domain.IClientRepository)
+DA:11,0
+DA:12,0
+DA:13,0
+DA:14,0
+FN:16,System.Void Bank.Clients.Api.Services.ProposalRefusedConsumer/<ConsumeMessage>d__2::MoveNext()
+FNDA:0,System.Void Bank.Clients.Api.Services.ProposalRefusedConsumer/<ConsumeMessage>d__2::MoveNext()
+DA:17,0
+DA:18,0
+DA:20,0
+DA:21,0
+DA:23,0
+DA:24,0
+DA:26,0
+DA:27,0
+BRDA:20,183,0,0
+BRDA:20,183,1,0
+BRDA:23,203,0,0
+BRDA:23,203,1,0
+LF:12
+LH:0
+BRF:4
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/services/Bank.Clients.Api/Migrations/20240712235704_IncluindoTabelaClientes.cs
+FN:12,System.Void Bank.Clients.Api.Migrations.IncluindoTabelaClientes::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+FNDA:0,System.Void Bank.Clients.Api.Migrations.IncluindoTabelaClientes::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+DA:13,0
+DA:14,0
+DA:15,0
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+FN:37,System.Void Bank.Clients.Api.Migrations.IncluindoTabelaClientes::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+FNDA:0,System.Void Bank.Clients.Api.Migrations.IncluindoTabelaClientes::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+LF:26
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/services/Bank.Clients.Api/Migrations/20240712235704_IncluindoTabelaClientes.Designer.cs
+FN:19,System.Void Bank.Clients.Api.Migrations.IncluindoTabelaClientes::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+FNDA:0,System.Void Bank.Clients.Api.Migrations.IncluindoTabelaClientes::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+DA:20,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:27,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:65,0
+LF:42
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/services/Bank.Clients.Api/Migrations/20240713000309_AjustandoNomeColunaUpdatedDate.cs
+FN:11,System.Void Bank.Clients.Api.Migrations.AjustandoNomeColunaUpdatedDate::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+FNDA:0,System.Void Bank.Clients.Api.Migrations.AjustandoNomeColunaUpdatedDate::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+FN:21,System.Void Bank.Clients.Api.Migrations.AjustandoNomeColunaUpdatedDate::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+FNDA:0,System.Void Bank.Clients.Api.Migrations.AjustandoNomeColunaUpdatedDate::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+LF:14
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/services/Bank.Clients.Api/Migrations/20240713000309_AjustandoNomeColunaUpdatedDate.Designer.cs
+FN:19,System.Void Bank.Clients.Api.Migrations.AjustandoNomeColunaUpdatedDate::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+FNDA:0,System.Void Bank.Clients.Api.Migrations.AjustandoNomeColunaUpdatedDate::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+DA:20,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:27,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:65,0
+LF:42
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/services/Bank.Clients.Api/Migrations/20240714234209_IncluindoCamposLimiteCreditoEProposalStatus.cs
+FN:11,System.Void Bank.Clients.Api.Migrations.IncluindoCamposLimiteCreditoEProposalStatus::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+FNDA:0,System.Void Bank.Clients.Api.Migrations.IncluindoCamposLimiteCreditoEProposalStatus::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+FN:31,System.Void Bank.Clients.Api.Migrations.IncluindoCamposLimiteCreditoEProposalStatus::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+FNDA:0,System.Void Bank.Clients.Api.Migrations.IncluindoCamposLimiteCreditoEProposalStatus::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+LF:26
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/services/Bank.Clients.Api/Migrations/20240714234209_IncluindoCamposLimiteCreditoEProposalStatus.Designer.cs
+FN:19,System.Void Bank.Clients.Api.Migrations.IncluindoCamposLimiteCreditoEProposalStatus::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+FNDA:0,System.Void Bank.Clients.Api.Migrations.IncluindoCamposLimiteCreditoEProposalStatus::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+DA:20,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:27,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:70,0
+DA:71,0
+DA:73,0
+LF:50
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/services/Bank.Clients.Api/Migrations/20240714235225_IncluindoCampoObservation.cs
+FN:11,System.Void Bank.Clients.Api.Migrations.IncluindoCampoObservation::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+FNDA:0,System.Void Bank.Clients.Api.Migrations.IncluindoCampoObservation::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+FN:23,System.Void Bank.Clients.Api.Migrations.IncluindoCampoObservation::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+FNDA:0,System.Void Bank.Clients.Api.Migrations.IncluindoCampoObservation::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+LF:15
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/services/Bank.Clients.Api/Migrations/20240714235225_IncluindoCampoObservation.Designer.cs
+FN:19,System.Void Bank.Clients.Api.Migrations.IncluindoCampoObservation::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+FNDA:0,System.Void Bank.Clients.Api.Migrations.IncluindoCampoObservation::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+DA:20,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:27,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:70,0
+DA:71,0
+DA:72,0
+DA:73,0
+DA:74,0
+DA:75,0
+DA:76,0
+DA:78,0
+LF:55
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/services/Bank.Clients.Api/Migrations/20240715000041_AjustandoCampoObservation.cs
+FN:11,System.Void Bank.Clients.Api.Migrations.AjustandoCampoObservation::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+FNDA:0,System.Void Bank.Clients.Api.Migrations.AjustandoCampoObservation::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+FN:24,System.Void Bank.Clients.Api.Migrations.AjustandoCampoObservation::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+FNDA:0,System.Void Bank.Clients.Api.Migrations.AjustandoCampoObservation::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+LF:22
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/services/Bank.Clients.Api/Migrations/20240715000041_AjustandoCampoObservation.Designer.cs
+FN:19,System.Void Bank.Clients.Api.Migrations.AjustandoCampoObservation::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+FNDA:0,System.Void Bank.Clients.Api.Migrations.AjustandoCampoObservation::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+DA:20,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:27,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:70,0
+DA:71,0
+DA:72,0
+DA:73,0
+DA:74,0
+DA:75,0
+DA:77,0
+LF:54
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/services/Bank.Clients.Api/Migrations/ApplicationDbContextModelSnapshot.cs
+FN:16,System.Void Bank.Clients.Api.Migrations.ApplicationDbContextModelSnapshot::BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+FNDA:0,System.Void Bank.Clients.Api.Migrations.ApplicationDbContextModelSnapshot::BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+DA:17,0
+DA:19,0
+DA:20,0
+DA:21,0
+DA:22,0
+DA:24,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:70,0
+DA:71,0
+DA:72,0
+DA:74,0
+LF:54
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/services/Bank.Clients.Api/Infrastructure/Data/ApplicationDbContext.cs
+FN:13,Microsoft.EntityFrameworkCore.DbSet`1<Bank.Clients.Api.Domain.Client> Bank.Clients.Api.Infrastructure.Data.ApplicationDbContext::get_Clients()
+FNDA:0,Microsoft.EntityFrameworkCore.DbSet`1<Bank.Clients.Api.Domain.Client> Bank.Clients.Api.Infrastructure.Data.ApplicationDbContext::get_Clients()
+DA:14,0
+FN:28,System.Void Bank.Clients.Api.Infrastructure.Data.ApplicationDbContext::OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)
+FNDA:0,System.Void Bank.Clients.Api.Infrastructure.Data.ApplicationDbContext::OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+BRDA:30,12,0,0
+BRDA:30,12,1,0
+FN:37,System.Void Bank.Clients.Api.Infrastructure.Data.ApplicationDbContext::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+FNDA:0,System.Void Bank.Clients.Api.Infrastructure.Data.ApplicationDbContext::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+DA:38,0
+DA:39,0
+DA:40,0
+DA:42,0
+DA:43,0
+DA:45,0
+DA:46,0
+FN:58,System.Void Bank.Clients.Api.Infrastructure.Data.ApplicationDbContext::UpdadteCreateAndUpdatedDate()
+FNDA:0,System.Void Bank.Clients.Api.Infrastructure.Data.ApplicationDbContext::UpdadteCreateAndUpdatedDate()
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:70,0
+DA:71,0
+DA:72,0
+DA:73,0
+DA:74,0
+DA:75,0
+BRDA:66,133,1,0
+BRDA:70,100,0,0
+BRDA:70,100,1,0
+BRDA:66,133,0,0
+BRDA:62,11,0,0
+BRDA:62,20,0,0
+BRDA:62,20,1,0
+BRDA:62,11,1,0
+FN:15,System.Void Bank.Clients.Api.Infrastructure.Data.ApplicationDbContext::.ctor()
+FNDA:0,System.Void Bank.Clients.Api.Infrastructure.Data.ApplicationDbContext::.ctor()
+DA:16,0
+DA:17,0
+DA:19,0
+FN:22,System.Void Bank.Clients.Api.Infrastructure.Data.ApplicationDbContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<Bank.Clients.Api.Infrastructure.Data.ApplicationDbContext>,Bank.Core.Mediator.IMediatorHandler)
+FNDA:0,System.Void Bank.Clients.Api.Infrastructure.Data.ApplicationDbContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<Bank.Clients.Api.Infrastructure.Data.ApplicationDbContext>,Bank.Core.Mediator.IMediatorHandler)
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+FN:48,System.Void Bank.Clients.Api.Infrastructure.Data.ApplicationDbContext/<CommitAsync>d__9::MoveNext()
+FNDA:0,System.Void Bank.Clients.Api.Infrastructure.Data.ApplicationDbContext/<CommitAsync>d__9::MoveNext()
+DA:49,0
+DA:50,0
+DA:52,0
+DA:53,0
+DA:55,0
+DA:56,0
+BRDA:53,179,0,0
+BRDA:53,179,1,0
+FN:84,System.Boolean Bank.Clients.Api.Infrastructure.Data.MediatorExtension/<>c__0`1::<PublishEvents>b__0_0(Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry`1<Bank.Core.DomainObjects.Entity>)
+FNDA:0,System.Boolean Bank.Clients.Api.Infrastructure.Data.MediatorExtension/<>c__0`1::<PublishEvents>b__0_0(Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry`1<Bank.Core.DomainObjects.Entity>)
+DA:85,0
+BRDA:85,11,0,0
+BRDA:85,11,1,0
+FN:87,System.Collections.Generic.IEnumerable`1<Bank.Core.Messages.Event> Bank.Clients.Api.Infrastructure.Data.MediatorExtension/<>c__0`1::<PublishEvents>b__0_1(Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry`1<Bank.Core.DomainObjects.Entity>)
+FNDA:0,System.Collections.Generic.IEnumerable`1<Bank.Core.Messages.Event> Bank.Clients.Api.Infrastructure.Data.MediatorExtension/<>c__0`1::<PublishEvents>b__0_1(Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry`1<Bank.Core.DomainObjects.Entity>)
+DA:88,0
+FN:91,System.Void Bank.Clients.Api.Infrastructure.Data.MediatorExtension/<>c__0`1::<PublishEvents>b__0_2(Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry`1<Bank.Core.DomainObjects.Entity>)
+FNDA:0,System.Void Bank.Clients.Api.Infrastructure.Data.MediatorExtension/<>c__0`1::<PublishEvents>b__0_2(Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry`1<Bank.Core.DomainObjects.Entity>)
+DA:92,0
+FN:95,System.Void Bank.Clients.Api.Infrastructure.Data.MediatorExtension/<>c__DisplayClass0_0`1/<<PublishEvents>b__3>d::MoveNext()
+FNDA:0,System.Void Bank.Clients.Api.Infrastructure.Data.MediatorExtension/<>c__DisplayClass0_0`1/<<PublishEvents>b__3>d::MoveNext()
+DA:96,0
+DA:97,0
+DA:98,0
+FN:81,System.Void Bank.Clients.Api.Infrastructure.Data.MediatorExtension/<PublishEvents>d__0`1::MoveNext()
+FNDA:0,System.Void Bank.Clients.Api.Infrastructure.Data.MediatorExtension/<PublishEvents>d__0`1::MoveNext()
+DA:82,0
+DA:83,0
+DA:84,0
+DA:87,0
+DA:89,0
+DA:91,0
+DA:94,0
+DA:95,0
+DA:100,0
+DA:101,0
+BRDA:83,74,0,0
+BRDA:83,74,1,0
+BRDA:87,122,0,0
+BRDA:87,122,1,0
+BRDA:91,179,0,0
+BRDA:91,179,1,0
+LF:59
+LH:0
+BRF:20
+BRH:0
+FNF:12
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/services/Bank.Clients.Api/Infrastructure/Data/Repositories/ClientRepository.cs
+FN:12,System.Void Bank.Clients.Api.Infrastructure.Data.Repositories.ClientRepository::Add(Bank.Clients.Api.Domain.Client)
+FNDA:0,System.Void Bank.Clients.Api.Infrastructure.Data.Repositories.ClientRepository::Add(Bank.Clients.Api.Domain.Client)
+DA:13,0
+DA:14,0
+DA:15,0
+FN:17,System.Void Bank.Clients.Api.Infrastructure.Data.Repositories.ClientRepository::Update(Bank.Clients.Api.Domain.Client)
+FNDA:0,System.Void Bank.Clients.Api.Infrastructure.Data.Repositories.ClientRepository::Update(Bank.Clients.Api.Domain.Client)
+DA:18,0
+DA:19,0
+DA:20,0
+FN:7,System.Void Bank.Clients.Api.Infrastructure.Data.Repositories.ClientRepository::.ctor(Bank.Clients.Api.Infrastructure.Data.ApplicationDbContext)
+FNDA:0,System.Void Bank.Clients.Api.Infrastructure.Data.Repositories.ClientRepository::.ctor(Bank.Clients.Api.Infrastructure.Data.ApplicationDbContext)
+DA:8,0
+DA:9,0
+DA:10,0
+FN:22,System.Void Bank.Clients.Api.Infrastructure.Data.Repositories.ClientRepository/<GetById>d__3::MoveNext()
+FNDA:0,System.Void Bank.Clients.Api.Infrastructure.Data.Repositories.ClientRepository/<GetById>d__3::MoveNext()
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+LF:13
+LH:0
+BRF:0
+BRH:0
+FNF:4
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/services/Bank.Clients.Api/Infrastructure/Data/Repositories/Repository.cs
+FN:6,Bank.Core.Data.IUnitOfWork Bank.Clients.Api.Infrastructure.Data.Repositories.Repository::get_UnitOfWork()
+FNDA:0,Bank.Core.Data.IUnitOfWork Bank.Clients.Api.Infrastructure.Data.Repositories.Repository::get_UnitOfWork()
+DA:7,0
+FN:8,System.Void Bank.Clients.Api.Infrastructure.Data.Repositories.Repository::.ctor(Bank.Clients.Api.Infrastructure.Data.ApplicationDbContext)
+FNDA:0,System.Void Bank.Clients.Api.Infrastructure.Data.Repositories.Repository::.ctor(Bank.Clients.Api.Infrastructure.Data.ApplicationDbContext)
+DA:9,0
+DA:10,0
+DA:11,0
+DA:12,0
+LF:5
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/services/Bank.Clients.Api/Infrastructure/Data/DbMappings/ClientMapping.cs
+FN:9,System.Void Bank.Clients.Api.Infrastructure.Data.DbMappings.ClientMapping::Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder`1<Bank.Clients.Api.Domain.Client>)
+FNDA:0,System.Void Bank.Clients.Api.Infrastructure.Data.DbMappings.ClientMapping::Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder`1<Bank.Clients.Api.Domain.Client>)
+DA:10,0
+DA:11,0
+DA:13,0
+DA:14,0
+DA:15,0
+DA:17,0
+DA:18,0
+DA:19,0
+DA:21,0
+DA:22,0
+DA:23,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:53,0
+DA:54,0
+LF:34
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/services/Bank.Clients.Api/Domain/Client.cs
+FN:6,System.String Bank.Clients.Api.Domain.Client::get_Name()
+FNDA:3,System.String Bank.Clients.Api.Domain.Client::get_Name()
+DA:7,3
+FN:7,System.DateTime Bank.Clients.Api.Domain.Client::get_BirthDate()
+FNDA:3,System.DateTime Bank.Clients.Api.Domain.Client::get_BirthDate()
+DA:8,3
+FN:8,System.String Bank.Clients.Api.Domain.Client::get_Document()
+FNDA:3,System.String Bank.Clients.Api.Domain.Client::get_Document()
+DA:9,3
+FN:9,System.String Bank.Clients.Api.Domain.Client::get_Email()
+FNDA:3,System.String Bank.Clients.Api.Domain.Client::get_Email()
+DA:10,3
+FN:10,Bank.Clients.Api.Domain.ProposalStatus Bank.Clients.Api.Domain.Client::get_ProposalStatus()
+FNDA:4,Bank.Clients.Api.Domain.ProposalStatus Bank.Clients.Api.Domain.Client::get_ProposalStatus()
+DA:11,4
+FN:11,System.String Bank.Clients.Api.Domain.Client::get_Observation()
+FNDA:1,System.String Bank.Clients.Api.Domain.Client::get_Observation()
+DA:12,1
+FN:12,System.Decimal Bank.Clients.Api.Domain.Client::get_CreditLimit()
+FNDA:2,System.Decimal Bank.Clients.Api.Domain.Client::get_CreditLimit()
+DA:13,2
+FN:28,System.Void Bank.Clients.Api.Domain.Client::SetProposalPending()
+FNDA:1,System.Void Bank.Clients.Api.Domain.Client::SetProposalPending()
+DA:29,1
+FN:31,System.Void Bank.Clients.Api.Domain.Client::SetProposalRefused(System.String)
+FNDA:0,System.Void Bank.Clients.Api.Domain.Client::SetProposalRefused(System.String)
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+FN:37,System.Void Bank.Clients.Api.Domain.Client::SetProposalApproved(System.String,System.Decimal)
+FNDA:1,System.Void Bank.Clients.Api.Domain.Client::SetProposalApproved(System.String,System.Decimal)
+DA:38,1
+DA:39,1
+DA:40,1
+DA:41,1
+DA:42,1
+FN:44,System.Void Bank.Clients.Api.Domain.Client::SetProposalFailedProposal(System.String)
+FNDA:0,System.Void Bank.Clients.Api.Domain.Client::SetProposalFailedProposal(System.String)
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+FN:14,System.Void Bank.Clients.Api.Domain.Client::.ctor()
+FNDA:0,System.Void Bank.Clients.Api.Domain.Client::.ctor()
+DA:15,0
+DA:16,0
+DA:18,0
+FN:19,System.Void Bank.Clients.Api.Domain.Client::.ctor(System.String,System.DateTime,System.String,System.String)
+FNDA:3,System.Void Bank.Clients.Api.Domain.Client::.ctor(System.String,System.DateTime,System.String,System.String)
+DA:20,3
+DA:21,3
+DA:22,3
+DA:23,3
+DA:24,3
+DA:25,3
+DA:26,3
+LF:31
+LH:20
+BRF:0
+BRH:0
+FNF:13
+FNH:10
+end_of_record
+SF:/home/michele/repos/banco/src/services/Bank.Clients.Api/Controllers/MainController.cs
+FN:10,Microsoft.AspNetCore.Mvc.ActionResult Bank.Clients.Api.Controllers.MainController::CustomResponse(System.Object)
+FNDA:0,Microsoft.AspNetCore.Mvc.ActionResult Bank.Clients.Api.Controllers.MainController::CustomResponse(System.Object)
+DA:11,0
+DA:12,0
+DA:13,0
+DA:14,0
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+BRDA:12,9,0,0
+BRDA:12,9,1,0
+FN:23,Microsoft.AspNetCore.Mvc.ActionResult Bank.Clients.Api.Controllers.MainController::CustomResponse(Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)
+FNDA:0,Microsoft.AspNetCore.Mvc.ActionResult Bank.Clients.Api.Controllers.MainController::CustomResponse(Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:31,0
+DA:32,0
+BRDA:26,87,1,0
+BRDA:26,87,0,0
+FN:34,Microsoft.AspNetCore.Mvc.ActionResult Bank.Clients.Api.Controllers.MainController::CustomResponse(FluentValidation.Results.ValidationResult)
+FNDA:0,Microsoft.AspNetCore.Mvc.ActionResult Bank.Clients.Api.Controllers.MainController::CustomResponse(FluentValidation.Results.ValidationResult)
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:41,0
+DA:42,0
+BRDA:36,46,1,0
+BRDA:36,46,0,0
+FN:44,System.Boolean Bank.Clients.Api.Controllers.MainController::ValidOperation()
+FNDA:0,System.Boolean Bank.Clients.Api.Controllers.MainController::ValidOperation()
+DA:45,0
+DA:46,0
+DA:47,0
+FN:49,System.Void Bank.Clients.Api.Controllers.MainController::AddErrorToStack(System.String)
+FNDA:0,System.Void Bank.Clients.Api.Controllers.MainController::AddErrorToStack(System.String)
+DA:50,0
+DA:51,0
+DA:52,0
+FN:54,System.Void Bank.Clients.Api.Controllers.MainController::CleanErrors()
+FNDA:0,System.Void Bank.Clients.Api.Controllers.MainController::CleanErrors()
+DA:55,0
+DA:56,0
+DA:57,0
+FN:7,System.Void Bank.Clients.Api.Controllers.MainController::.ctor()
+FNDA:0,System.Void Bank.Clients.Api.Controllers.MainController::.ctor()
+DA:8,0
+LF:34
+LH:0
+BRF:6
+BRH:0
+FNF:7
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/services/Bank.Clients.Api/Controllers/v1/ClientController.cs
+FN:14,System.Void Bank.Clients.Api.Controllers.v1.ClientController::.ctor(Bank.Core.Mediator.IMediatorHandler)
+FNDA:0,System.Void Bank.Clients.Api.Controllers.v1.ClientController::.ctor(Bank.Core.Mediator.IMediatorHandler)
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+FN:24,System.Void Bank.Clients.Api.Controllers.v1.ClientController/<Register>d__2::MoveNext()
+FNDA:0,System.Void Bank.Clients.Api.Controllers.v1.ClientController/<Register>d__2::MoveNext()
+DA:25,0
+DA:26,0
+DA:27,0
+LF:7
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/services/Bank.Clients.Api/Configurations/ApiConfig.cs
+FN:8,Microsoft.Extensions.DependencyInjection.IServiceCollection Bank.Clients.Api.Configurations.ApiConfig::AddApiConfig(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+FNDA:0,Microsoft.Extensions.DependencyInjection.IServiceCollection Bank.Clients.Api.Configurations.ApiConfig::AddApiConfig(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+DA:9,0
+DA:10,0
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+DA:17,0
+DA:18,0
+DA:20,0
+DA:21,0
+DA:23,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:29,0
+DA:30,0
+FN:32,System.Void Bank.Clients.Api.Configurations.ApiConfig::UseApiConfig(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+FNDA:0,System.Void Bank.Clients.Api.Configurations.ApiConfig::UseApiConfig(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:40,0
+DA:43,0
+DA:45,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+LF:30
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/services/Bank.Clients.Api/Configurations/DatabaseConfig.cs
+FN:6,Microsoft.Extensions.DependencyInjection.IServiceCollection Bank.Clients.Api.Configurations.DatabaseConfig::AddDatabaseConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+FNDA:0,Microsoft.Extensions.DependencyInjection.IServiceCollection Bank.Clients.Api.Configurations.DatabaseConfig::AddDatabaseConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+DA:7,0
+DA:8,0
+DA:10,0
+DA:11,0
+DA:13,0
+DA:15,0
+DA:16,0
+LF:7
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/services/Bank.Clients.Api/Configurations/DependecyResolveConfig.cs
+FN:8,System.Void Bank.Clients.Api.Configurations.DependecyResolveConfig::AddDependecyResolver(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+FNDA:0,System.Void Bank.Clients.Api.Configurations.DependecyResolveConfig::AddDependecyResolver(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+DA:9,0
+DA:10,0
+DA:12,0
+DA:13,0
+FN:15,System.Void Bank.Clients.Api.Configurations.DependecyResolveConfig::ResolveRepositories(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+FNDA:0,System.Void Bank.Clients.Api.Configurations.DependecyResolveConfig::ResolveRepositories(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+DA:16,0
+DA:17,0
+DA:18,0
+LF:7
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/services/Bank.Clients.Api/Application/Events/ClientEventHandler.cs
+FN:5,System.Void Bank.Clients.Api.Application.Events.ClientEventHandler::.ctor(Bank.Message.IMessageBus)
+FNDA:1,System.Void Bank.Clients.Api.Application.Events.ClientEventHandler::.ctor(Bank.Message.IMessageBus)
+DA:6,1
+DA:9,1
+FN:13,System.Void Bank.Clients.Api.Application.Events.ClientEventHandler/<Handle>d__2::MoveNext()
+FNDA:1,System.Void Bank.Clients.Api.Application.Events.ClientEventHandler/<Handle>d__2::MoveNext()
+DA:14,1
+DA:15,1
+DA:16,1
+LF:5
+LH:5
+BRF:0
+BRH:0
+FNF:2
+FNH:2
+end_of_record
+SF:/home/michele/repos/banco/src/services/Bank.Clients.Api/Application/Commands/AddClientCommand.cs
+FN:7,System.String Bank.Clients.Api.Application.Commands.AddClientCommand::get_Name()
+FNDA:27,System.String Bank.Clients.Api.Application.Commands.AddClientCommand::get_Name()
+DA:8,27
+FN:8,System.DateTime Bank.Clients.Api.Application.Commands.AddClientCommand::get_BirthDate()
+FNDA:26,System.DateTime Bank.Clients.Api.Application.Commands.AddClientCommand::get_BirthDate()
+DA:9,26
+FN:9,System.String Bank.Clients.Api.Application.Commands.AddClientCommand::get_Document()
+FNDA:28,System.String Bank.Clients.Api.Application.Commands.AddClientCommand::get_Document()
+DA:10,28
+FN:10,System.String Bank.Clients.Api.Application.Commands.AddClientCommand::get_Email()
+FNDA:29,System.String Bank.Clients.Api.Application.Commands.AddClientCommand::get_Email()
+DA:11,29
+FN:11,System.Decimal Bank.Clients.Api.Application.Commands.AddClientCommand::get_SolicitedLimit()
+FNDA:26,System.Decimal Bank.Clients.Api.Application.Commands.AddClientCommand::get_SolicitedLimit()
+DA:12,26
+FN:14,System.Boolean Bank.Clients.Api.Application.Commands.AddClientCommand::IsValid()
+FNDA:2,System.Boolean Bank.Clients.Api.Application.Commands.AddClientCommand::IsValid()
+DA:15,2
+DA:16,2
+DA:17,2
+DA:18,2
+FN:22,System.Void Bank.Clients.Api.Application.Commands.AddClientValidation::.ctor()
+FNDA:12,System.Void Bank.Clients.Api.Application.Commands.AddClientValidation::.ctor()
+DA:23,12
+DA:24,12
+DA:25,12
+DA:26,12
+DA:27,12
+DA:29,12
+DA:30,12
+DA:31,12
+DA:33,12
+DA:34,12
+DA:35,12
+DA:37,12
+DA:38,12
+DA:39,12
+DA:40,12
+DA:41,12
+DA:43,12
+DA:44,12
+DA:45,12
+DA:46,12
+LF:29
+LH:29
+BRF:0
+BRH:0
+FNF:7
+FNH:7
+end_of_record
+SF:/home/michele/repos/banco/src/services/Bank.Clients.Api/Application/Commands/ClientCommandHandler.cs
+FN:8,System.Void Bank.Clients.Api.Application.Commands.ClientCommandHandler::.ctor(Bank.Clients.Api.Domain.IClientRepository)
+FNDA:2,System.Void Bank.Clients.Api.Application.Commands.ClientCommandHandler::.ctor(Bank.Clients.Api.Domain.IClientRepository)
+DA:9,2
+DA:12,2
+FN:13,System.Void Bank.Clients.Api.Application.Commands.ClientCommandHandler/<Handle>d__2::MoveNext()
+FNDA:2,System.Void Bank.Clients.Api.Application.Commands.ClientCommandHandler/<Handle>d__2::MoveNext()
+DA:14,2
+DA:15,3
+DA:17,1
+DA:18,1
+DA:19,1
+DA:20,1
+DA:21,1
+DA:23,1
+DA:25,1
+DA:26,1
+DA:27,1
+DA:28,1
+DA:29,1
+DA:30,1
+DA:32,1
+DA:33,1
+DA:35,1
+DA:36,2
+BRDA:15,34,0,1
+BRDA:15,34,1,1
+LF:20
+LH:20
+BRF:2
+BRH:2
+FNF:2
+FNH:2
+end_of_record
+SF:/home/michele/repos/banco/src/building-blocks/Bank.Message/ConsumedMessage.cs
+FN:6,T Bank.Message.ConsumedMessage`1::get_Data()
+FNDA:6,T Bank.Message.ConsumedMessage`1::get_Data()
+DA:7,6
+FN:7,System.Boolean Bank.Message.ConsumedMessage`1::get_Redelivered()
+FNDA:2,System.Boolean Bank.Message.ConsumedMessage`1::get_Redelivered()
+DA:8,2
+FN:8,System.Int32 Bank.Message.ConsumedMessage`1::get_RetryCount()
+FNDA:2,System.Int32 Bank.Message.ConsumedMessage`1::get_RetryCount()
+DA:9,2
+FN:10,System.Void Bank.Message.ConsumedMessage`1::.ctor(MassTransit.ConsumeContext`1<T>)
+FNDA:2,System.Void Bank.Message.ConsumedMessage`1::.ctor(MassTransit.ConsumeContext`1<T>)
+DA:11,2
+DA:12,2
+DA:13,2
+DA:14,2
+DA:15,2
+DA:16,2
+LF:9
+LH:9
+BRF:0
+BRH:0
+FNF:4
+FNH:4
+end_of_record
+SF:/home/michele/repos/banco/src/building-blocks/Bank.Message/ConsumerConfiguration.cs
+FN:4,System.String Bank.Message.ConsumerConfiguration::get_QueueName()
+FNDA:0,System.String Bank.Message.ConsumerConfiguration::get_QueueName()
+DA:5,0
+FN:5,System.Type Bank.Message.ConsumerConfiguration::get_ConsumerType()
+FNDA:0,System.Type Bank.Message.ConsumerConfiguration::get_ConsumerType()
+DA:6,0
+FN:6,System.Int32 Bank.Message.ConsumerConfiguration::get_CountRetry()
+FNDA:0,System.Int32 Bank.Message.ConsumerConfiguration::get_CountRetry()
+DA:7,0
+LF:3
+LH:0
+BRF:0
+BRH:0
+FNF:3
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/building-blocks/Bank.Message/MessageBus.cs
+FN:4,System.Void Bank.Message.MessageBus::.ctor(MassTransit.IPublishEndpoint)
+FNDA:0,System.Void Bank.Message.MessageBus::.ctor(MassTransit.IPublishEndpoint)
+DA:5,0
+DA:7,0
+FN:9,System.Void Bank.Message.MessageBus/<Publish>d__2`1::MoveNext()
+FNDA:0,System.Void Bank.Message.MessageBus/<Publish>d__2`1::MoveNext()
+DA:10,0
+DA:11,0
+DA:12,0
+LF:5
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/building-blocks/Bank.Message/MessageBusConfiguration.cs
+FN:11,Microsoft.Extensions.DependencyInjection.IServiceCollection Bank.Message.MessageBusConfiguration::AddMessageBus(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Collections.Generic.List`1<Bank.Message.ProducerConfiguration>,System.Collections.Generic.List`1<Bank.Message.ConsumerConfiguration>)
+FNDA:0,Microsoft.Extensions.DependencyInjection.IServiceCollection Bank.Message.MessageBusConfiguration::AddMessageBus(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Collections.Generic.List`1<Bank.Message.ProducerConfiguration>,System.Collections.Generic.List`1<Bank.Message.ConsumerConfiguration>)
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+DA:17,0
+DA:20,0
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:64,0
+DA:66,0
+DA:67,0
+BRDA:13,33,0,0
+BRDA:13,33,1,0
+BRDA:14,58,0,0
+BRDA:14,58,1,0
+BRDA:15,83,0,0
+BRDA:15,83,1,0
+BRDA:17,109,0,0
+BRDA:17,109,1,0
+BRDA:22,21,0,0
+BRDA:22,21,1,0
+BRDA:27,57,0,0
+BRDA:27,57,1,0
+BRDA:29,45,0,0
+BRDA:29,45,1,0
+BRDA:36,82,0,0
+BRDA:36,82,1,0
+BRDA:41,112,0,0
+BRDA:41,112,1,0
+BRDA:49,42,0,0
+BRDA:49,42,1,0
+FN:72,System.Void Bank.Message.MessageBusConfiguration::ConfigureProducer(MassTransit.IRabbitMqBusFactoryConfigurator,System.String,System.Type)
+FNDA:0,System.Void Bank.Message.MessageBusConfiguration::ConfigureProducer(MassTransit.IRabbitMqBusFactoryConfigurator,System.String,System.Type)
+DA:73,0
+DA:74,0
+DA:75,0
+DA:77,0
+DA:78,0
+FN:83,System.Void Bank.Message.MessageBusConfiguration::ProducerConfiguration(MassTransit.IRabbitMqBusFactoryConfigurator,System.String)
+FNDA:0,System.Void Bank.Message.MessageBusConfiguration::ProducerConfiguration(MassTransit.IRabbitMqBusFactoryConfigurator,System.String)
+DA:84,0
+DA:85,0
+DA:86,0
+DA:87,0
+DA:88,0
+DA:89,0
+DA:90,0
+DA:91,0
+DA:92,0
+DA:93,0
+DA:94,0
+DA:95,0
+DA:96,0
+DA:97,0
+DA:98,0
+DA:99,0
+DA:100,0
+DA:101,0
+DA:102,0
+DA:103,0
+DA:104,0
+DA:105,0
+DA:106,0
+BRDA:102,8,0,0
+BRDA:102,8,1,0
+BRDA:89,27,0,0
+BRDA:89,27,1,0
+BRDA:95,70,0,0
+BRDA:95,70,1,0
+BRDA:100,152,0,0
+BRDA:100,152,1,0
+LF:79
+LH:0
+BRF:28
+BRH:0
+FNF:3
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/building-blocks/Bank.Message/MessageConsumedException.cs
+FN:3,System.Void Bank.Message.MessageConsumedException::.ctor()
+FNDA:0,System.Void Bank.Message.MessageConsumedException::.ctor()
+DA:4,0
+DA:5,0
+DA:7,0
+FN:7,System.Void Bank.Message.MessageConsumedException::.ctor(System.String)
+FNDA:1,System.Void Bank.Message.MessageConsumedException::.ctor(System.String)
+DA:8,1
+DA:9,1
+DA:10,1
+LF:6
+LH:3
+BRF:0
+BRH:0
+FNF:2
+FNH:1
+end_of_record
+SF:/home/michele/repos/banco/src/building-blocks/Bank.Message/MessageConsumer.cs
+FN:8,System.Void Bank.Message.MessageConsumer`1/<Consume>d__1::MoveNext()
+FNDA:0,System.Void Bank.Message.MessageConsumer`1/<Consume>d__1::MoveNext()
+DA:9,0
+DA:10,0
+DA:11,0
+DA:12,0
+LF:4
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/building-blocks/Bank.Message/ProducerConfiguration.cs
+FN:4,System.String Bank.Message.ProducerConfiguration::get_QueueName()
+FNDA:0,System.String Bank.Message.ProducerConfiguration::get_QueueName()
+DA:5,0
+FN:5,System.Type Bank.Message.ProducerConfiguration::get_ProducerType()
+FNDA:0,System.Type Bank.Message.ProducerConfiguration::get_ProducerType()
+DA:6,0
+LF:2
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/building-blocks/Bank.Core/Messages/Command.cs
+FN:8,System.DateTime Bank.Core.Messages.Command::get_Timestamp()
+FNDA:12,System.DateTime Bank.Core.Messages.Command::get_Timestamp()
+DA:9,12
+FN:11,FluentValidation.Results.ValidationResult Bank.Core.Messages.Command::get_ValidationResult()
+FNDA:5,FluentValidation.Results.ValidationResult Bank.Core.Messages.Command::get_ValidationResult()
+DA:12,5
+FN:19,System.Boolean Bank.Core.Messages.Command::IsValid()
+FNDA:0,System.Boolean Bank.Core.Messages.Command::IsValid()
+DA:20,0
+DA:21,0
+FN:13,System.Void Bank.Core.Messages.Command::.ctor()
+FNDA:12,System.Void Bank.Core.Messages.Command::.ctor()
+DA:14,12
+DA:15,12
+DA:16,12
+DA:17,12
+LF:8
+LH:6
+BRF:0
+BRH:0
+FNF:4
+FNH:3
+end_of_record
+SF:/home/michele/repos/banco/src/building-blocks/Bank.Core/Messages/CommandHandler.cs
+FN:15,System.Void Bank.Core.Messages.CommandHandler::AddError(System.String)
+FNDA:0,System.Void Bank.Core.Messages.CommandHandler::AddError(System.String)
+DA:16,0
+DA:17,0
+DA:18,0
+FN:9,System.Void Bank.Core.Messages.CommandHandler::.ctor()
+FNDA:2,System.Void Bank.Core.Messages.CommandHandler::.ctor()
+DA:10,2
+DA:11,2
+DA:12,2
+DA:13,2
+FN:20,System.Void Bank.Core.Messages.CommandHandler/<PersistData>d__3::MoveNext()
+FNDA:1,System.Void Bank.Core.Messages.CommandHandler/<PersistData>d__3::MoveNext()
+DA:21,1
+DA:22,1
+DA:24,1
+DA:25,1
+BRDA:22,133,0,0
+BRDA:22,133,1,1
+LF:11
+LH:8
+BRF:2
+BRH:1
+FNF:3
+FNH:2
+end_of_record
+SF:/home/michele/repos/banco/src/building-blocks/Bank.Core/Messages/Event.cs
+FN:6,System.DateTime Bank.Core.Messages.Event::get_Timestamp()
+FNDA:4,System.DateTime Bank.Core.Messages.Event::get_Timestamp()
+DA:7,4
+FN:8,System.Void Bank.Core.Messages.Event::.ctor()
+FNDA:4,System.Void Bank.Core.Messages.Event::.ctor()
+DA:9,4
+DA:10,4
+DA:11,4
+DA:12,4
+LF:5
+LH:5
+BRF:0
+BRH:0
+FNF:2
+FNH:2
+end_of_record
+SF:/home/michele/repos/banco/src/building-blocks/Bank.Core/Messages/Message.cs
+FN:3,System.String Bank.Core.Messages.Message::get_MessageType()
+FNDA:16,System.String Bank.Core.Messages.Message::get_MessageType()
+DA:4,16
+FN:4,System.Guid Bank.Core.Messages.Message::get_AggregateId()
+FNDA:4,System.Guid Bank.Core.Messages.Message::get_AggregateId()
+DA:5,4
+FN:6,System.Void Bank.Core.Messages.Message::.ctor()
+FNDA:16,System.Void Bank.Core.Messages.Message::.ctor()
+DA:7,16
+DA:8,16
+DA:9,16
+DA:10,16
+LF:6
+LH:6
+BRF:0
+BRH:0
+FNF:3
+FNH:3
+end_of_record
+SF:/home/michele/repos/banco/src/building-blocks/Bank.Core/Messages/Integration/ClientRegistredEvent.cs
+FN:4,System.Guid Bank.Core.Messages.Integration.ClientRegistredEvent::get_ClientId()
+FNDA:2,System.Guid Bank.Core.Messages.Integration.ClientRegistredEvent::get_ClientId()
+DA:5,2
+FN:5,System.Decimal Bank.Core.Messages.Integration.ClientRegistredEvent::get_SolicitedLimit()
+FNDA:2,System.Decimal Bank.Core.Messages.Integration.ClientRegistredEvent::get_SolicitedLimit()
+DA:6,2
+FN:6,System.String Bank.Core.Messages.Integration.ClientRegistredEvent::get_Document()
+FNDA:2,System.String Bank.Core.Messages.Integration.ClientRegistredEvent::get_Document()
+DA:7,2
+FN:8,System.Void Bank.Core.Messages.Integration.ClientRegistredEvent::.ctor(System.Guid,System.Decimal,System.String)
+FNDA:2,System.Void Bank.Core.Messages.Integration.ClientRegistredEvent::.ctor(System.Guid,System.Decimal,System.String)
+DA:9,2
+DA:10,2
+DA:11,2
+DA:12,2
+DA:13,2
+DA:14,2
+DA:15,2
+LF:10
+LH:10
+BRF:0
+BRH:0
+FNF:4
+FNH:4
+end_of_record
+SF:/home/michele/repos/banco/src/building-blocks/Bank.Core/Messages/Integration/CreditCardCreatedEvent.cs
+FN:4,System.Guid Bank.Core.Messages.Integration.CreditCardCreatedEvent::get_CreditCardId()
+FNDA:2,System.Guid Bank.Core.Messages.Integration.CreditCardCreatedEvent::get_CreditCardId()
+DA:5,2
+FN:5,System.Guid Bank.Core.Messages.Integration.CreditCardCreatedEvent::get_ClientId()
+FNDA:4,System.Guid Bank.Core.Messages.Integration.CreditCardCreatedEvent::get_ClientId()
+DA:6,4
+FN:6,System.String Bank.Core.Messages.Integration.CreditCardCreatedEvent::get_Message()
+FNDA:3,System.String Bank.Core.Messages.Integration.CreditCardCreatedEvent::get_Message()
+DA:7,3
+FN:7,System.Decimal Bank.Core.Messages.Integration.CreditCardCreatedEvent::get_CreditLimit()
+FNDA:3,System.Decimal Bank.Core.Messages.Integration.CreditCardCreatedEvent::get_CreditLimit()
+DA:8,3
+FN:8,System.String Bank.Core.Messages.Integration.CreditCardCreatedEvent::get_CardNumber()
+FNDA:2,System.String Bank.Core.Messages.Integration.CreditCardCreatedEvent::get_CardNumber()
+DA:9,2
+FN:9,System.String Bank.Core.Messages.Integration.CreditCardCreatedEvent::get_SecurityCode()
+FNDA:2,System.String Bank.Core.Messages.Integration.CreditCardCreatedEvent::get_SecurityCode()
+DA:10,2
+FN:11,System.Void Bank.Core.Messages.Integration.CreditCardCreatedEvent::.ctor(System.Guid,System.String,System.Decimal,System.String,System.String,System.Guid)
+FNDA:2,System.Void Bank.Core.Messages.Integration.CreditCardCreatedEvent::.ctor(System.Guid,System.String,System.Decimal,System.String,System.String,System.Guid)
+DA:12,2
+DA:13,2
+DA:14,2
+DA:15,2
+DA:16,2
+DA:17,2
+DA:18,2
+DA:19,2
+DA:20,2
+DA:21,2
+DA:22,2
+DA:23,2
+DA:24,2
+DA:25,2
+DA:26,2
+DA:27,2
+LF:22
+LH:22
+BRF:0
+BRH:0
+FNF:7
+FNH:7
+end_of_record
+SF:/home/michele/repos/banco/src/building-blocks/Bank.Core/Messages/Integration/CreditCardRefusedEvent.cs
+FN:4,System.Guid Bank.Core.Messages.Integration.CreditCardRefusedEvent::get_ClientId()
+FNDA:0,System.Guid Bank.Core.Messages.Integration.CreditCardRefusedEvent::get_ClientId()
+DA:5,0
+FN:5,System.String Bank.Core.Messages.Integration.CreditCardRefusedEvent::get_Message()
+FNDA:0,System.String Bank.Core.Messages.Integration.CreditCardRefusedEvent::get_Message()
+DA:6,0
+FN:7,System.Void Bank.Core.Messages.Integration.CreditCardRefusedEvent::.ctor(System.Guid,System.String)
+FNDA:0,System.Void Bank.Core.Messages.Integration.CreditCardRefusedEvent::.ctor(System.Guid,System.String)
+DA:8,0
+DA:9,0
+DA:10,0
+DA:11,0
+DA:12,0
+DA:13,0
+LF:8
+LH:0
+BRF:0
+BRH:0
+FNF:3
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/building-blocks/Bank.Core/Messages/Integration/ProposalApprovedEvent.cs
+FN:4,System.String Bank.Core.Messages.Integration.ProposalApprovedEvent::get_Document()
+FNDA:0,System.String Bank.Core.Messages.Integration.ProposalApprovedEvent::get_Document()
+DA:5,0
+FN:5,System.Guid Bank.Core.Messages.Integration.ProposalApprovedEvent::get_ClientId()
+FNDA:0,System.Guid Bank.Core.Messages.Integration.ProposalApprovedEvent::get_ClientId()
+DA:6,0
+FN:6,System.Decimal Bank.Core.Messages.Integration.ProposalApprovedEvent::get_ApprovedLimit()
+FNDA:0,System.Decimal Bank.Core.Messages.Integration.ProposalApprovedEvent::get_ApprovedLimit()
+DA:7,0
+FN:8,System.Void Bank.Core.Messages.Integration.ProposalApprovedEvent::.ctor(System.String,System.Guid,System.Decimal)
+FNDA:0,System.Void Bank.Core.Messages.Integration.ProposalApprovedEvent::.ctor(System.String,System.Guid,System.Decimal)
+DA:9,0
+DA:10,0
+DA:11,0
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+LF:10
+LH:0
+BRF:0
+BRH:0
+FNF:4
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/building-blocks/Bank.Core/Messages/Integration/ProposalFailedEvent.cs
+FN:4,System.Guid Bank.Core.Messages.Integration.ProposalFailedEvent::get_ClientId()
+FNDA:0,System.Guid Bank.Core.Messages.Integration.ProposalFailedEvent::get_ClientId()
+DA:5,0
+FN:5,System.String Bank.Core.Messages.Integration.ProposalFailedEvent::get_Message()
+FNDA:0,System.String Bank.Core.Messages.Integration.ProposalFailedEvent::get_Message()
+DA:6,0
+FN:7,System.Void Bank.Core.Messages.Integration.ProposalFailedEvent::.ctor(System.Guid,System.String)
+FNDA:0,System.Void Bank.Core.Messages.Integration.ProposalFailedEvent::.ctor(System.Guid,System.String)
+DA:8,0
+DA:9,0
+DA:10,0
+DA:11,0
+DA:12,0
+DA:13,0
+LF:8
+LH:0
+BRF:0
+BRH:0
+FNF:3
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/building-blocks/Bank.Core/Messages/Integration/ProposalRefusedEvent.cs
+FN:4,System.Guid Bank.Core.Messages.Integration.ProposalRefusedEvent::get_ProposalId()
+FNDA:0,System.Guid Bank.Core.Messages.Integration.ProposalRefusedEvent::get_ProposalId()
+DA:5,0
+FN:5,System.Guid Bank.Core.Messages.Integration.ProposalRefusedEvent::get_ClientId()
+FNDA:0,System.Guid Bank.Core.Messages.Integration.ProposalRefusedEvent::get_ClientId()
+DA:6,0
+FN:6,System.String Bank.Core.Messages.Integration.ProposalRefusedEvent::get_Message()
+FNDA:0,System.String Bank.Core.Messages.Integration.ProposalRefusedEvent::get_Message()
+DA:7,0
+FN:8,System.Void Bank.Core.Messages.Integration.ProposalRefusedEvent::.ctor(System.Guid,System.Guid,System.String)
+FNDA:0,System.Void Bank.Core.Messages.Integration.ProposalRefusedEvent::.ctor(System.Guid,System.Guid,System.String)
+DA:9,0
+DA:10,0
+DA:11,0
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+LF:10
+LH:0
+BRF:0
+BRH:0
+FNF:4
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/building-blocks/Bank.Core/Mediator/MediatorHandler.cs
+FN:9,System.Void Bank.Core.Mediator.MediatorHandler::.ctor(MediatR.IMediator)
+FNDA:0,System.Void Bank.Core.Mediator.MediatorHandler::.ctor(MediatR.IMediator)
+DA:10,0
+DA:11,0
+DA:12,0
+DA:13,0
+FN:19,System.Void Bank.Core.Mediator.MediatorHandler/<PublishEvent>d__3`1::MoveNext()
+FNDA:0,System.Void Bank.Core.Mediator.MediatorHandler/<PublishEvent>d__3`1::MoveNext()
+DA:20,0
+DA:21,0
+DA:22,0
+FN:15,System.Void Bank.Core.Mediator.MediatorHandler/<SendCommand>d__2`1::MoveNext()
+FNDA:0,System.Void Bank.Core.Mediator.MediatorHandler/<SendCommand>d__2`1::MoveNext()
+DA:16,0
+DA:17,0
+DA:18,0
+LF:10
+LH:0
+BRF:0
+BRH:0
+FNF:3
+FNH:0
+end_of_record
+SF:/home/michele/repos/banco/src/building-blocks/Bank.Core/DomainObjects/Entity.cs
+FN:5,System.Guid Bank.Core.DomainObjects.Entity::get_Id()
+FNDA:4,System.Guid Bank.Core.DomainObjects.Entity::get_Id()
+DA:6,4
+FN:6,System.DateTime Bank.Core.DomainObjects.Entity::get_CreatedDate()
+FNDA:0,System.DateTime Bank.Core.DomainObjects.Entity::get_CreatedDate()
+DA:7,0
+FN:7,System.DateTime Bank.Core.DomainObjects.Entity::get_UpdatedDate()
+FNDA:0,System.DateTime Bank.Core.DomainObjects.Entity::get_UpdatedDate()
+DA:8,0
+FN:15,System.Collections.Generic.IReadOnlyCollection`1<Bank.Core.Messages.Event> Bank.Core.DomainObjects.Entity::get_Notifications()
+FNDA:1,System.Collections.Generic.IReadOnlyCollection`1<Bank.Core.Messages.Event> Bank.Core.DomainObjects.Entity::get_Notifications()
+DA:16,1
+BRDA:16,7,0,0
+BRDA:16,7,1,1
+FN:18,System.Void Bank.Core.DomainObjects.Entity::AddEvent(Bank.Core.Messages.Event)
+FNDA:1,System.Void Bank.Core.DomainObjects.Entity::AddEvent(Bank.Core.Messages.Event)
+DA:19,1
+DA:20,1
+DA:21,1
+DA:22,1
+BRDA:20,7,0,1
+BRDA:20,7,1,1
+FN:24,System.Void Bank.Core.DomainObjects.Entity::RemoveEvent(Bank.Core.Messages.Event)
+FNDA:0,System.Void Bank.Core.DomainObjects.Entity::RemoveEvent(Bank.Core.Messages.Event)
+DA:25,0
+DA:26,0
+DA:27,0
+BRDA:26,8,0,0
+BRDA:26,8,1,0
+FN:29,System.Void Bank.Core.DomainObjects.Entity::ClearEvents()
+FNDA:0,System.Void Bank.Core.DomainObjects.Entity::ClearEvents()
+DA:30,0
+DA:31,0
+DA:32,0
+BRDA:31,8,0,0
+BRDA:31,8,1,0
+FN:9,System.Void Bank.Core.DomainObjects.Entity::.ctor()
+FNDA:3,System.Void Bank.Core.DomainObjects.Entity::.ctor()
+DA:10,3
+DA:11,3
+DA:12,3
+DA:13,3
+LF:18
+LH:10
+BRF:8
+BRH:3
+FNF:8
+FNH:4
+end_of_record
+SF:/home/michele/repos/banco/src/building-blocks/Bank.Core/Attributes/DefaultExceptionFilterAttribute.cs
+FN:12,System.Void Bank.Clients.Api.Attributes.DefaultExceptionFilterAttribute::OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)
+FNDA:0,System.Void Bank.Clients.Api.Attributes.DefaultExceptionFilterAttribute::OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)
+DA:13,0
+DA:14,0
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+LF:15
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record

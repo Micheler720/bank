@@ -13,7 +13,7 @@ public class Entity
     }
 
     private List<Event>? _events;
-    public IReadOnlyCollection<Event>? Notificacoes => _events?.AsReadOnly();
+    public IReadOnlyCollection<Event>? Notifications => _events?.AsReadOnly();
 
     public void AddEvent(Event @event)
     {

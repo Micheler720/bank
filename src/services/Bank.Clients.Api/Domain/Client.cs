@@ -46,12 +46,4 @@ public class Client : Entity
         ProposalStatus = ProposalStatus.FailedProposal;
         Observation = observation;
     }
-    
-    public void SetProposalFailedCreditCard()
-        => ProposalStatus = ProposalStatus.FailedCreditCard;
-    
-    public void UpdatedCreditLimit(decimal creditLimit)
-    {
-        CreditLimit = creditLimit;
-    }
 }

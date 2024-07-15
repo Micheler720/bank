@@ -13,19 +13,35 @@ public class AddClientCommand : Command
 
     public override bool IsValid()
     {
-        ValidationResult = new AddClientCommandValidation().Validate(this);
+        ValidationResult = new AddClientValidation().Validate(this);
         return ValidationResult.IsValid;
     }
 }
 
-public class AddClientCommandValidation : AbstractValidator<AddClientCommand>
+public class AddClientValidation : AbstractValidator<AddClientCommand>
 {
-    public AddClientCommandValidation()
+    public AddClientValidation()
     {
-        RuleFor(c => c.Name).NotEmpty().WithMessage("Name é obrigatório.");
-        RuleFor(c => c.BirthDate).NotEmpty().WithMessage("BirthDate é obrigatório.");
-        RuleFor(c => c.Document).NotEmpty().WithMessage("Document é obrigatório.");
-        RuleFor(c => c.Email).NotEmpty().WithMessage("Email é obrigatório.");
-        RuleFor(c => c.SolicitedLimit).NotEmpty().WithMessage("SolicitedLimit é obrigatório.");
+        RuleFor(c => c.Name)
+            .NotEmpty()
+            .WithMessage("Nome é obrigatório.");
+
+        RuleFor(c => c.BirthDate)
+            .NotEmpty()
+            .WithMessage("Data Nascimento é obrigatório.");
+        
+        RuleFor(c => c.Document)
+            .NotEmpty()
+            .WithMessage("Documento é obrigatório.");
+        
+        RuleFor(c => c.Email)
+            .NotNull()
+            .WithMessage("E-mail é obrigatório.")
+            .EmailAddress()
+            .WithMessage("E-mail inválido.");
+
+        RuleFor(c => c.SolicitedLimit)
+            .NotEmpty()
+            .WithMessage("Limite solicitado é obrigatório.");
     }
 }
