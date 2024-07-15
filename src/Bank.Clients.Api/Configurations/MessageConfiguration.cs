@@ -35,7 +35,7 @@ public static class MessageConfiguration
             }
         };
 
-        services.AddMessageBus(producerConfigurations: producers, consumerConfigs: consumers);
+        services.AddMessageBus(producerConfigurations: producers, consumerConfigurations: consumers);
         
     }
 }

@@ -8,7 +8,7 @@ public static class MessageBusConfiguration
     public static IServiceCollection AddMessageBus(
         this IServiceCollection services,
         List<ProducerConfiguration>? producerConfigurations = null,
-        List<ConsumerConfiguration>? consumerConfigs = null)
+        List<ConsumerConfiguration>? consumerConfigurations = null)
     {
         var user = Environment.GetEnvironmentVariable("RABBITMQ_USER") ?? "";
         var host = Environment.GetEnvironmentVariable("RABBITMQ_HOST") ?? "";
@@ -19,7 +19,7 @@ public static class MessageBusConfiguration
 
         services.AddMassTransit(x =>
         {
-            consumerConfigs?.ForEach(consumer =>
+            consumerConfigurations?.ForEach(consumer =>
             {
                 x.AddConsumer(consumer.ConsumerType);
             });
@@ -38,7 +38,7 @@ public static class MessageBusConfiguration
                     ConfigureProducer(cfg, producer.QueueName, producer.ProducerType);
                 });
                 
-                consumerConfigs?.ForEach(consumer =>
+                consumerConfigurations?.ForEach(consumer =>
                 {
                     cfg.ReceiveEndpoint(consumer.QueueName, e =>
                     {
