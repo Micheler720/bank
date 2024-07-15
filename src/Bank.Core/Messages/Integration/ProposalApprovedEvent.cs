@@ -2,15 +2,16 @@ namespace Bank.Core.Messages.Integration;
 
 public class ProposalApprovedEvent : Event
 {
-    public Guid ProposalId { get; private set; }
+    public string Document { get; private set; }
     public Guid ClientId { get; private set; }
-    public decimal SolicitedLimit { get; private set; }
+    public decimal ApprovedLimit { get; private set; }
 
-    public ProposalApprovedEvent(Guid proposalId, Guid clientId, decimal salicitedLimit)
+    public ProposalApprovedEvent(string document, Guid clientId, decimal approvedLimit)
     {
-        ProposalId = proposalId;
+        AggregateId = clientId;
+        Document = document;
         ClientId = clientId;
-        SolicitedLimit = salicitedLimit;
+        ApprovedLimit = approvedLimit;
     }
 
 }
