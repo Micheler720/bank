@@ -8,6 +8,7 @@ public class ProposalRefusedEvent : Event
 
     public ProposalRefusedEvent(Guid proposalId, Guid clientId, string message)
     {
+        AggregateId = proposalId;
         ProposalId = proposalId;
         ClientId = clientId;
         Message = message;

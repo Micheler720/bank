@@ -46,7 +46,12 @@ public static class MessageBusConfiguration
                         e.AutoDelete = false;
                         e.Durable = true;
                         e.PrefetchCount = 10;
-                        e.UseMessageRetry(r => r.Interval(consumer.CountRetry, TimeSpan.FromSeconds(60)));
+                        e.UseMessageRetry(r => { 
+                            r.Interval(consumer.CountRetry, TimeSpan.FromSeconds(60));
+                            r.Ignore<MessageConsumedException>();
+                            r.Ignore<ArgumentNullException>();
+                        });
+                        
 
                         e.ConfigureConsumer(context, consumer.ConsumerType);
                     });
