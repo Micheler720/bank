@@ -41,8 +41,11 @@ public class Client : Entity
         Observation = observation;
     }
 
-    public void SetProposalFailedProposal()
-        => ProposalStatus = ProposalStatus.FailedProposal;
+    public void SetProposalFailedProposal(string observation)
+    {
+        ProposalStatus = ProposalStatus.FailedProposal;
+        Observation = observation;
+    }
     
     public void SetProposalFailedCreditCard()
         => ProposalStatus = ProposalStatus.FailedCreditCard;

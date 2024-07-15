@@ -19,7 +19,11 @@ public static class MessageConfiguration
             },
             new() {
                 QueueName = "credit-card-created-queue",
-                ConsumerType = typeof(CreditCardConsumer)
+                ConsumerType = typeof(CreditCardCreatedConsumer)
+            },
+            new() {
+                QueueName = "credit-card-refused-queue",
+                ConsumerType = typeof(CreditCardRefusedConsumer)
             }
         };
 

@@ -3,12 +3,12 @@ using Bank.Core.Messages.Integration;
 using Bank.Message;
 
 namespace Bank.Clients.Api.Services;
-public class CreditCardConsumer :
+public class CreditCardCreatedConsumer :
     MessageConsumer<CreditCardCreatedEvent>
 {
     private readonly IClientRepository _clientRepository;
 
-    public CreditCardConsumer(IClientRepository clientRepository)
+    public CreditCardCreatedConsumer(IClientRepository clientRepository)
     {
         _clientRepository = clientRepository;
     }
