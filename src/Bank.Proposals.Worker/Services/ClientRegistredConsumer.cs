@@ -25,7 +25,7 @@ namespace Bank.Proposals.Worker.Services
             if(message.RetryCount == 5)
             {
                 Log.Error("[ClientRegistredConsumer.ConsumeMessage] - Houve uma falha no consumo da proposta de crédito.");
-                await _messageBus.Publish(new ProposalFailedEvent(message.Data.ClientId));
+                await _messageBus.Publish(new ProposalFailedEvent(message.Data.ClientId, "Houve uma falha no consumo da proposta de crédito."));
                 return;
             }
 
