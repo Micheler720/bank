@@ -14,8 +14,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Bank.Core\Bank.Core.csproj" />
-    <ProjectReference Include="..\Bank.Message\Bank.Message.csproj" />
+    <ProjectReference Include="..\..\building-blocks\Bank.Core\Bank.Core.csproj" />
+    <ProjectReference Include="..\..\building-blocks\Bank.Message\Bank.Message.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Services/" />
   </ItemGroup>
 
 </Project>
