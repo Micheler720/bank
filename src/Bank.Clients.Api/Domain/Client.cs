@@ -8,6 +8,9 @@ public class Client : Entity
     public DateTime BirthDate { get; private set; }
     public string? Document { get; private set; }
     public string? Email { get; private set; }
+    public ProposalStatus ProposalStatus { get; private set; }
+    public string? Observation { get; private set; }
+    public decimal CreditLimit { get; private set; }
 
     protected Client()
     {
@@ -20,5 +23,28 @@ public class Client : Entity
         BirthDate = birthDate;
         Document = document;
         Email = email;
+    }
+
+    public void SetProposalPending()
+        => ProposalStatus = ProposalStatus.Pending;
+    
+    public void SetProposalRefused(string observation)
+    {
+        ProposalStatus = ProposalStatus.Refused;
+        Observation = observation;
+    }
+    
+    public void SetProposalApproved()
+        => ProposalStatus = ProposalStatus.Approved;
+    
+    public void SetProposalFailedProposal()
+        => ProposalStatus = ProposalStatus.FailedProposal;
+    
+    public void SetProposalFailedCreditCard()
+        => ProposalStatus = ProposalStatus.FailedCreditCard;
+    
+    public void UpdatedCreditLimit(decimal creditLimit)
+    {
+        CreditLimit = creditLimit;
     }
 }
