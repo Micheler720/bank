@@ -39,7 +39,7 @@ public class ProposalService : IProposalService
 
        var proposalApprovedEvent = new ProposalApprovedEvent
        (
-           proposal.Id,
+           proposal.Document,
            proposal.ClientId,
            proposal.SolicitedLimit
        );

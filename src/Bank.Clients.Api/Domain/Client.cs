@@ -34,9 +34,13 @@ public class Client : Entity
         Observation = observation;
     }
     
-    public void SetProposalApproved()
-        => ProposalStatus = ProposalStatus.Approved;
-    
+    public void SetProposalApproved(string observation, decimal creditLimit)
+    {
+        ProposalStatus = ProposalStatus.Approved;
+        CreditLimit = creditLimit;
+        Observation = observation;
+    }
+
     public void SetProposalFailedProposal()
         => ProposalStatus = ProposalStatus.FailedProposal;
     
