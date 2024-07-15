@@ -9,8 +9,7 @@ public class AddClientCommand : Command
     public DateTime BirthDate { get; set; }
     public string? Document { get; set; }
     public string? Email { get; set; }
-    public float CreditLimit { get; set; }
-    public float SolicitedLimit { get; set; }
+    public decimal SolicitedLimit { get; set; }
 
     public override bool IsValid()
     {
@@ -23,10 +22,10 @@ public class AddClientCommandValidation : AbstractValidator<AddClientCommand>
 {
     public AddClientCommandValidation()
     {
-        RuleFor(c => c.Name).NotEmpty().WithMessage("Name is required");
-        RuleFor(c => c.BirthDate).NotEmpty().WithMessage("BirthDate is required");
-        RuleFor(c => c.Document).NotEmpty().WithMessage("Document is required");
-        RuleFor(c => c.Email).NotEmpty().WithMessage("Email is required");
-        RuleFor(c => c.CreditLimit).NotEmpty().WithMessage("CreditLimit is required");
+        RuleFor(c => c.Name).NotEmpty().WithMessage("Name é obrigatório.");
+        RuleFor(c => c.BirthDate).NotEmpty().WithMessage("BirthDate é obrigatório.");
+        RuleFor(c => c.Document).NotEmpty().WithMessage("Document é obrigatório.");
+        RuleFor(c => c.Email).NotEmpty().WithMessage("Email é obrigatório.");
+        RuleFor(c => c.SolicitedLimit).NotEmpty().WithMessage("SolicitedLimit é obrigatório.");
     }
 }

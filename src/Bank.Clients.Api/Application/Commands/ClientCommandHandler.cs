@@ -27,9 +27,9 @@ public class ClientCommandHandler(IClientRepository clientRepository) : CommandH
             clientId: client.Id,
             solicitedLimit: request.SolicitedLimit,
             document: request.Document!
-
         );
 
+        client.SetProposalPending();
         client.AddEvent(clienteRegistred);
 
         return await PersistData(_clientRepository.UnitOfWork); 
