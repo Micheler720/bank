@@ -1,8 +1,8 @@
 # Bank
 ![Badge](https://img.shields.io/static/v1?label=Microservices&message=.Net&color=512BD4&style=flat&logo=dotnet)
-![Badge](https://img.shields.io/static/v1?label=Bank&message=RabbitMQ&color=FF6600&style=flat&logo=rabbitmq)
-![Badge](https://img.shields.io/static/v1?label=Bank&message=Postgress&color=4169E1&style=flat&logo=postgresql)
-![Badge](https://img.shields.io/static/v1?label=Bank&message=Docker&color=2496ED&style=flat&logo=docker)
+![Badge](https://img.shields.io/static/v1?label=Mensageria&message=RabbitMQ&color=FF6600&style=flat&logo=rabbitmq)
+![Badge](https://img.shields.io/static/v1?label=Banco&message=Postgress&color=4169E1&style=flat&logo=postgresql)
+![Badge](https://img.shields.io/static/v1?label=Infrastructure&message=Docker&color=2496ED&style=flat&logo=docker)
 
 
 Projeto desenvolvido para cadastro de clientes, propostas de crédito e geração de cartão de crédito.
@@ -58,7 +58,7 @@ A arquitetura do sistema é baseada em microserviços, cada um responsável por 
 - **Proposta de Crédito**
 - **Cartão de Crédito**
 
-![Arquitetura do Sistema](docs/architecture.png)
+![Arquitetura do Sistema](documentation/ProposalCreditArquiteture.jpg)
 
 
 ## Instalação
@@ -113,4 +113,7 @@ dotnet test
 ```
 
 ## Contato
-**E-mail**: micheler720@gmail.com
+
+[![Linkedin Badge](https://img.shields.io/badge/-Michele-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/tgmarinho/)](https://www.linkedin.com/in/michele-ribeiro-9111a9a7/) 
+[![Gmail Badge](https://img.shields.io/badge/-micheler720@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:micheler720@gmail.com)](mailto:micheler720@gmail.com)
+
