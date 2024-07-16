@@ -1,4 +1,9 @@
 # Bank
+![Badge](https://img.shields.io/static/v1?label=Microservices&message=.Net&color=512BD4&style=flat&logo=dotnet)
+![Badge](https://img.shields.io/static/v1?label=Bank&message=RabbitMQ&color=FF6600&style=flat&logo=rabbitmq)
+![Badge](https://img.shields.io/static/v1?label=Bank&message=Postgress&color=4169E1&style=flat&logo=postgresql)
+![Badge](https://img.shields.io/static/v1?label=Bank&message=Docker&color=2496ED&style=flat&logo=docker)
+
 
 Projeto desenvolvido para cadastro de clientes, propostas de crédito e geração de cartão de crédito.
 
