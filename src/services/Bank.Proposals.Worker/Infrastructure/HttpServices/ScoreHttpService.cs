@@ -1,7 +1,9 @@
+using System.Diagnostics.CodeAnalysis;
 using Bank.Proposals.Worker.Domain.HttpService;
 
 namespace Bank.Proposals.Worker.Infrastructure.HttpServices;
 
+[ExcludeFromCodeCoverage]
 public class ScoreHttpService : IScoreHttpService
 {
     public Task<int> GetScore(string document)
