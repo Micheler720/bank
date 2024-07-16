@@ -4,39 +4,37 @@ using Bank.Proposals.Worker.Domain.Entities;
 using Bank.Proposals.Worker.Domain.Services.Interface;
 using Serilog;
 
-namespace Bank.Proposals.Worker.Services
+namespace Bank.Proposals.Worker.Services;
+public class ClientRegistredConsumer :
+    MessageConsumer<ClientRegistredEvent>
 {
-    public class ClientRegistredConsumer :
-        MessageConsumer<ClientRegistredEvent>
+    private readonly IMessageBus _messageBus;
+    private readonly IProposalService _proposalService;
+
+    public ClientRegistredConsumer(
+        IMessageBus messageBus,
+        IProposalService proposalService)
     {
-        private readonly IMessageBus _messageBus;
-        private readonly IProposalService _proposalService;
+        _messageBus = messageBus;
+        _proposalService = proposalService;
+    }
 
-        public ClientRegistredConsumer(
-            IMessageBus messageBus, 
-            IProposalService proposalService)
+    public override async Task ConsumeMessage(ConsumedMessage<ClientRegistredEvent> message)
+    {
+        if (message.RetryCount == 5)
         {
-            _messageBus = messageBus;     
-            _proposalService = proposalService;       
+            Log.Error("[ClientRegistredConsumer.ConsumeMessage] - Houve uma falha no consumo da proposta de crédito.");
+            await _messageBus.Publish(new ProposalFailedEvent(message.Data.ClientId, "Houve uma falha no consumo da proposta de crédito."));
+            return;
         }
 
-        public override async Task ConsumeMessage(ConsumedMessage<ClientRegistredEvent> message)
+        var proposal = new Proposal
         {
-            if(message.RetryCount == 5)
-            {
-                Log.Error("[ClientRegistredConsumer.ConsumeMessage] - Houve uma falha no consumo da proposta de crédito.");
-                await _messageBus.Publish(new ProposalFailedEvent(message.Data.ClientId, "Houve uma falha no consumo da proposta de crédito."));
-                return;
-            }
+            ClientId = message.Data.ClientId,
+            Document = message.Data.Document,
+            SolicitedLimit = message.Data.SolicitedLimit
+        };
 
-            var proposal = new Proposal
-            {
-                ClientId = message.Data.ClientId,
-                Document = message.Data.Document,
-                SolicitedLimit = message.Data.SolicitedLimit
-            };
-
-            await _proposalService.ProccessProposal(proposal);
-        }
+        await _proposalService.ProccessProposal(proposal);
     }
 }
