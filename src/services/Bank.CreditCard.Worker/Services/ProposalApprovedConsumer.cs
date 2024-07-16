@@ -23,7 +23,10 @@ public class ProposalApprovedConsumer :
             return;
         }
 
-        await _creditCardService.CreateCreditCard(message.Data.ClientId, message.Data.Document, message.Data.ApprovedLimit);
+        await _creditCardService.CreateCreditCard(
+            message.Data.ClientId, 
+            message.Data.Document, 
+            message.Data.ApprovedLimit);
 
     }
 }

@@ -29,6 +29,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\services\Bank.Clients.Api\Bank.Clients.Api.csproj" />
+    <ProjectReference Include="..\..\services\Bank.CreditCard.Worker\Bank.CreditCard.Worker.csproj" />
   </ItemGroup>
 
 </Project>
