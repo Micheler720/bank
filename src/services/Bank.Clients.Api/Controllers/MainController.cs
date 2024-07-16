@@ -1,3 +1,4 @@
+using System.Net;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
@@ -7,11 +8,17 @@ public abstract class MainController : ControllerBase
 {
     protected ICollection<string> Errors = new List<string>();
 
-    protected ActionResult CustomResponse(object? result = null)
+    protected ActionResult CustomResponse(
+        object? result = null, 
+        HttpStatusCode httpStatusCode = HttpStatusCode.OK)
     {
         if (ValidOperation())
         {
-            return Ok(result);
+            return httpStatusCode switch
+            {
+                HttpStatusCode.Created => Created("", result),
+                _ => Ok(result),
+            };
         }
 
         return BadRequest(new ValidationProblemDetails(new Dictionary<string, string[]>
@@ -38,7 +45,7 @@ public abstract class MainController : ControllerBase
             AddErrorToStack(error.ErrorMessage);
         }
 
-        return CustomResponse();
+        return CustomResponse(httpStatusCode: HttpStatusCode.Created);
     }
 
     protected bool ValidOperation()

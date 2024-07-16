@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 using Bank.Clients.Api.Domain;
 using Bank.Clients.Api.Infrastructure.Data.DbMappings;
 using Bank.Core.Data;
@@ -8,6 +9,8 @@ using Bank.Core.Messages;
 using Microsoft.EntityFrameworkCore;
 
 namespace Bank.Clients.Api.Infrastructure.Data;
+
+[ExcludeFromCodeCoverage]
 public class ApplicationDbContext : DbContext, IUnitOfWork
 {
     private readonly IMediatorHandler _mediatorHandler;
@@ -76,6 +79,7 @@ public class ApplicationDbContext : DbContext, IUnitOfWork
 
 }
 
+[ExcludeFromCodeCoverage]
 public static class MediatorExtension
 {
     public static async Task PublishEvents<T>(this IMediatorHandler mediator, T ctx) where T : DbContext

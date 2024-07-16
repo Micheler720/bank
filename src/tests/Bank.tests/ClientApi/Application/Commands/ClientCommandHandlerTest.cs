@@ -7,10 +7,8 @@ using Xunit;
 
 namespace Bank.tests.ClientApi.Application.Commands;
 
-
 public class ClientCommandHandlerTest
 {
-
     #region Mocks
     private readonly Mock<IClientRepository> _clientRepositoryMock;
     private readonly Mock<IUnitOfWork> _unitOfWorkMock;
@@ -37,7 +35,7 @@ public class ClientCommandHandlerTest
     [Fact]
     public async Task Handle_should_set_proposal_pendind_when_register_client()
     {
-        var handler = new ClientCommandHandler(_clientRepositoryMock.Object);
+        var handler = _mocker.CreateInstance<ClientCommandHandler>();
 
         var result = await handler.Handle(_command, CancellationToken.None);
         
@@ -50,7 +48,7 @@ public class ClientCommandHandlerTest
     [Fact]
     public async Task Handle_should_invali_when_command_invalid()
     {
-        var handler = new ClientCommandHandler(_clientRepositoryMock.Object);
+        var handler = _mocker.CreateInstance<ClientCommandHandler>();
         _command.Email = "invalid";
 
         var result = await handler.Handle(_command, CancellationToken.None);

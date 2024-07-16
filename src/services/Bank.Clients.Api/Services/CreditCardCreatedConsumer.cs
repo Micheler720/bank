@@ -20,7 +20,7 @@ public class CreditCardCreatedConsumer :
         if(client == null) 
             throw new MessageConsumedException("[ProposalRefusedConsumer.ConsumeMessage] - Não existe cliente cadastrado.");
         
-        client?.SetProposalApproved(message.Data.Message, message.Data.CreditLimit);
+        client.SetProposalApproved(message.Data.Message, message.Data.CreditLimit);
         
         _clientRepository.Update(client!);
        

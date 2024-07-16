@@ -1,8 +1,11 @@
+using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 using Bank.Clients.Api.Attributes;
 using Serilog;
 
 namespace Bank.Clients.Api.Configurations;
+
+[ExcludeFromCodeCoverage]
 public static class ApiConfig
 {
     public static IServiceCollection AddApiConfig(this IServiceCollection services, IConfiguration configuration)

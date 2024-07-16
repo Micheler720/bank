@@ -20,7 +20,7 @@ public class ProposalRefusedConsumer :
         if(client == null) 
             throw new MessageConsumedException("[ProposalRefusedConsumer.ConsumeMessage] - Não existe cliente cadastrado.");
         
-        client?.SetProposalRefused(message.Data.Message);
+        client.SetProposalRefused(message.Data.Message);
         _clientRepository.Update(client!);
        
         await _clientRepository.UnitOfWork.CommitAsync();

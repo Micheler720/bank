@@ -1,8 +1,10 @@
+using System.Diagnostics.CodeAnalysis;
 using Bank.Clients.Api.Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace Bank.Clients.Api.Infrastructure.Data.Repositories;
 
+[ExcludeFromCodeCoverage]
 public class ClientRepository : Repository, IClientRepository
 {
     public ClientRepository(ApplicationDbContext dbContext) : base(dbContext)

@@ -1,9 +1,11 @@
+using System.Diagnostics.CodeAnalysis;
 using Bank.Clients.Api.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Bank.Clients.Api.Infrastructure.Data.DbMappings;
 
+[ExcludeFromCodeCoverage]
 public class ClientMapping : IEntityTypeConfiguration<Client>
 {
     public void Configure(EntityTypeBuilder<Client> builder)

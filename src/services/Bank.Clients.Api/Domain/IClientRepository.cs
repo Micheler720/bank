@@ -7,6 +7,4 @@ public interface IClientRepository : IRepository
     void Add(Client client);
     void Update(Client client);
     Task<Client?> GetById(Guid clientId);
-    
-
 }

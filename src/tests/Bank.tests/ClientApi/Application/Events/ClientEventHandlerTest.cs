@@ -21,7 +21,7 @@ public class ClientEventHandlerTest
     [Fact]
     public async Task Handle_should_publish_notification()
     {
-        var notificationHandler = new ClientEventHandler(_messageBusMock.Object);
+        var notificationHandler = _mocker.CreateInstance<ClientEventHandler>();
 
         var clienteRegistredEvent = new ClientRegistredEvent(Guid.NewGuid(), 2000, "12345678");
 
