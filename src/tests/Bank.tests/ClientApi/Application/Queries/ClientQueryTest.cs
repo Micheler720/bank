@@ -36,7 +36,7 @@ public class ClientQueryTest
 
         var client = await query.GetByDocument("123456789");
 
-        Assert.Equal(_client.Name, client.Name);
+        Assert.Equal(_client.Name, client!.Name);
         Assert.Equal(_client.BirthDate, client.BirthDate);
         Assert.Equal(_client.Document, client.Document);
         Assert.Equal(_client.Email, client.Email);
@@ -50,7 +50,7 @@ public class ClientQueryTest
         var query = _mocker.CreateInstance<ClientQuery>();
 
         _clientRepoisitoryMock.Setup(x => x.GetByDocument(It.IsAny<string>()))
-            .ReturnsAsync((Client)null);
+            .ReturnsAsync((Client)null!);
 
         var client = await query.GetByDocument("123456789");
 

@@ -46,7 +46,7 @@ public class CreditCardsControllerTest
         var creditCards = result?.Value as IEnumerable<CreditCardEntity>;
 
         Assert.Equal((int)HttpStatusCode.OK, result!.StatusCode);
-        Assert.Equal(_creditCard, creditCards.First());
+        Assert.Equal(_creditCard, creditCards!.First());
 
         _creditCardRepositoryMock.Verify(x => x.GetByClientId(clientId), Times.Once);
     }
@@ -57,7 +57,7 @@ public class CreditCardsControllerTest
         var clientId = Guid.NewGuid();        
 
         _creditCardRepositoryMock.Setup(x => x.GetByClientId(clientId))
-            .ReturnsAsync((List<CreditCardEntity>)null);
+            .ReturnsAsync((List<CreditCardEntity>)null!);
         
         var controller = _mocker.CreateInstance<CreditCardsController>();
 
