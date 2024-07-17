@@ -6,5 +6,5 @@ public interface ICreditCardRepository : IRepository
 {
     void Add(CreditCardEntity creditCard);
     void AddRange(IEnumerable<CreditCardEntity> creditCards);
-    Task<IEnumerable<CreditCardEntity>?> GetByClient(Guid clientId);
+    Task<IEnumerable<CreditCardEntity>?> GetByClientId(Guid clientId);
 }

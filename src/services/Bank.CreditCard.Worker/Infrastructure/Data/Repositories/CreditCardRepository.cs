@@ -20,7 +20,7 @@ public class CreditCardRepository : Repository, ICreditCardRepository
         _context.CreditCards.AddRange(creditCards);
     }
 
-    public async Task<IEnumerable<CreditCardEntity>?> GetByClient(Guid clientId)
+    public async Task<IEnumerable<CreditCardEntity>?> GetByClientId(Guid clientId)
     {
         return await _context.CreditCards.Where(creditCard => creditCard.ClientId == clientId)
             .ToListAsync();
