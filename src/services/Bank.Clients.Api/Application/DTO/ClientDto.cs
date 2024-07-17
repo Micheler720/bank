@@ -11,6 +11,8 @@ public class ClientDto
     public string? Observation { get; set; }
     public decimal CreditLimit { get; set; }
 
+    public ClientDto() { }
+
     public ClientDto(Client client)
     {
         Name = client.Name;

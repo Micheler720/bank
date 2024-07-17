@@ -5,7 +5,7 @@ namespace Bank.Clients.Api.Application.Queries;
 
 public interface IClientQuery
 {
-    public Task<ClientDto> GetByDocument(string document);
+    public Task<ClientDto?> GetByDocument(string document);
 
 }
 

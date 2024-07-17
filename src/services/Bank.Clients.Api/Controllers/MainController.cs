@@ -17,6 +17,7 @@ public abstract class MainController : ControllerBase
             return httpStatusCode switch
             {
                 HttpStatusCode.Created => Created("", result),
+                HttpStatusCode.NoContent => NoContent(),
                 _ => Ok(result),
             };
         }
