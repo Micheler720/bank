@@ -32,13 +32,9 @@ public class ProposalApprovedConsumerTest
     public async Task ConsumeMessage_WhenCalled_ShouldProposalAproved()
     {
         var consumer = _mocker.CreateInstance<ProposalApprovedConsumer>();  
-
-        var mockConsumeContext = new Mock<ConsumeContext<ProposalApprovedEvent>>();
-        mockConsumeContext.Setup(x => x.Message).Returns(_event);
-        mockConsumeContext.Setup(x => x.ReceiveContext.Redelivered).Returns(false);
         
         var consumedMessage = 
-            new ConsumedMessage<ProposalApprovedEvent>(mockConsumeContext.Object);
+            new ConsumedMessage<ProposalApprovedEvent>(_event);
 
         await consumer.ConsumeMessage(consumedMessage);
 
@@ -50,6 +46,26 @@ public class ProposalApprovedConsumerTest
         _messageBusMock.Verify(x => x.Publish(
             It.IsAny<ProposalFailedEvent>(), 
             It.IsAny<CancellationToken>()), Times.Never);
+    }
+
+    [Fact]
+    public async Task ConsumeMessage_WhenCalled_ShouldProposalFailedEvent()
+    {
+        var consumer = _mocker.CreateInstance<ProposalApprovedConsumer>();  
+        
+        var consumedMessage = 
+            new ConsumedMessage<ProposalApprovedEvent>(_event, true, 5);
+
+        await consumer.ConsumeMessage(consumedMessage);
+
+        _creditCardServiceMock.Verify(x => x.CreateCreditCard(
+            It.IsAny<Guid>(), 
+            It.IsAny<string>(), 
+            It.IsAny<decimal[]>()), Times.Never);
+
+        _messageBusMock.Verify(x => x.Publish(
+            It.IsAny<ProposalFailedEvent>(), 
+            It.IsAny<CancellationToken>()), Times.Once);
     }
 
 }

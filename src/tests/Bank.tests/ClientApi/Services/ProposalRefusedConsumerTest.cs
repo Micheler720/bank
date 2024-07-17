@@ -44,14 +44,10 @@ public class ProposalRefusedConsumerTest
     [Fact]
     public async Task Consume_WhenCalled_CreditCardRefuserd()
     {
-        var consumer = _mocker.CreateInstance<ProposalRefusedConsumer>();  
-
-        var mockConsumeContext = new Mock<ConsumeContext<ProposalRefusedEvent>>();
-        mockConsumeContext.Setup(x => x.Message).Returns(_event);
-        mockConsumeContext.Setup(x => x.ReceiveContext.Redelivered).Returns(false);
+        var consumer = _mocker.CreateInstance<ProposalRefusedConsumer>(); 
         
         var consumedMessage = 
-            new ConsumedMessage<ProposalRefusedEvent>(mockConsumeContext.Object);
+            new ConsumedMessage<ProposalRefusedEvent>(_event);
 
         await consumer.ConsumeMessage(consumedMessage);
 
@@ -63,16 +59,12 @@ public class ProposalRefusedConsumerTest
     public async Task Consume_ShouldThrowException_WhenClientNotRegistred()
     {
         _clientRepositoryMock.Setup(x => x.GetById(It.IsAny<Guid>()))
-            .ReturnsAsync((Client)null);
+            .ReturnsAsync((Client)null!);
 
-        var consumer = _mocker.CreateInstance<ProposalRefusedConsumer>();  
-
-        var mockConsumeContext = new Mock<ConsumeContext<ProposalRefusedEvent>>();
-        mockConsumeContext.Setup(x => x.Message).Returns(_event);
-        mockConsumeContext.Setup(x => x.ReceiveContext.Redelivered).Returns(false);
+        var consumer = _mocker.CreateInstance<ProposalRefusedConsumer>();
         
         var consumedMessage = 
-            new ConsumedMessage<ProposalRefusedEvent>(mockConsumeContext.Object);
+            new ConsumedMessage<ProposalRefusedEvent>(_event);
 
         var ex = await Assert.ThrowsAsync<MessageConsumedException>(() => consumer.ConsumeMessage(consumedMessage));
 

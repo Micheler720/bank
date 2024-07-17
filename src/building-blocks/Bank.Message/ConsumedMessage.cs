@@ -8,10 +8,10 @@ public class ConsumedMessage<T> where T : class
     public bool Redelivered { get; private set; }
     public int RetryCount { get; private set; }
 
-    public ConsumedMessage(ConsumeContext<T> message)
+    public ConsumedMessage(T data, bool redelivered = false, int retryCount = 0)
     {
-        Data = message.Message;
-        Redelivered = message.ReceiveContext.Redelivered;
-        RetryCount = message.GetRetryCount() + 1;
+        Data = data;
+        Redelivered = redelivered;
+        RetryCount = retryCount;
     }
 }

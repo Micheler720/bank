@@ -31,18 +31,31 @@ public class ClientRegistredConsumerTest
     [Fact]
     public async Task Consume_WhenCalled_ShouldCreateCreditCard()
     {
-        var consumer = _mocker.CreateInstance<ClientRegistredConsumer>();  
-
-        var mockConsumeContext = new Mock<ConsumeContext<ClientRegistredEvent>>();
-        mockConsumeContext.Setup(x => x.Message).Returns(_event);
-        mockConsumeContext.Setup(x => x.ReceiveContext.Redelivered).Returns(false);
+        var consumer = _mocker.CreateInstance<ClientRegistredConsumer>();
         
         var consumedMessage = 
-            new ConsumedMessage<ClientRegistredEvent>(mockConsumeContext.Object);
+            new ConsumedMessage<ClientRegistredEvent>(_event);
 
         await consumer.ConsumeMessage(consumedMessage);
 
         _proposalServiceMock.Verify(x => x.ProccessProposal(It.IsAny<Proposal>()), Times.Once);
+    }
+
+    [Fact]
+    public async Task Consume_WhenCalled_ShouldPublishProposalFailedEvent()
+    {
+        var consumer = _mocker.CreateInstance<ClientRegistredConsumer>();
+        
+        var consumedMessage = 
+            new ConsumedMessage<ClientRegistredEvent>(_event, true, 5);
+
+        await consumer.ConsumeMessage(consumedMessage);
+
+        _proposalServiceMock.Verify(x => x.ProccessProposal(It.IsAny<Proposal>()), Times.Never);
+        
+        _messageBusMock.Verify(x => x.Publish(
+            It.IsAny<ProposalFailedEvent>(), 
+            It.IsAny<CancellationToken>()), Times.Once);
     }
 
 }
