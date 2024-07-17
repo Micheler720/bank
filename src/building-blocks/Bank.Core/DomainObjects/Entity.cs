@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using Bank.Core.Messages;
 
 namespace Bank.Core.DomainObjects;
@@ -13,6 +14,8 @@ public class Entity
     }
 
     private List<Event>? _events;
+    
+    [JsonIgnore]
     public IReadOnlyCollection<Event>? Notifications => _events?.AsReadOnly();
 
     public void AddEvent(Event @event)
