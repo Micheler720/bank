@@ -12,7 +12,7 @@ public class ClientCommandHandler(IClientRepository clientRepository) : CommandH
     private readonly IClientRepository _clientRepository = clientRepository;
     public async Task<ValidationResult> Handle(AddClientCommand request, CancellationToken cancellationToken)
     {
-        if(!request.IsValid()) return request.ValidationResult;   
+        if(!request.IsValid()) return request.ValidationResult!;   
 
         var client = await _clientRepository.GetByDocument(request.Document!);
 

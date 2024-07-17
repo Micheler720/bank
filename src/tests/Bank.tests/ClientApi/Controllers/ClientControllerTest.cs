@@ -69,7 +69,7 @@ public class ClientControllerTest
         var client = result?.Value as ClientDto;
 
         Assert.Equal((int)HttpStatusCode.OK, result!.StatusCode);
-        Assert.Equal(_clientDto.Observation, client.Observation);
+        Assert.Equal(_clientDto.Observation, client!.Observation);
         Assert.Equal(_clientDto.Name, client.Name);
         Assert.Equal(_clientDto.BirthDate, client.BirthDate);
         Assert.Equal(_clientDto.Document, client.Document);
@@ -83,7 +83,7 @@ public class ClientControllerTest
         var document = "123456789";        
 
         _clientQueryMock.Setup(x => x.GetByDocument(document))
-            .ReturnsAsync((ClientDto)null);
+            .ReturnsAsync((ClientDto)null!);
         
         var controller = _mocker.CreateInstance<ClientController>();
 

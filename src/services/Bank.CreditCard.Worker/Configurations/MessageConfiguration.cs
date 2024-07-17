@@ -13,22 +13,13 @@ public static class MessageConfiguration
     {
         var consumers = new List<ConsumerConfiguration>
         {
-            new() {
-                QueueName = "proposal-approved-queue",
-                ConsumerType = typeof(ProposalApprovedConsumer)
-            }
+            new("proposal-approved-queue", typeof(ProposalApprovedConsumer))
         };
 
         var producers = new List<ProducerConfiguration>
         {
-            new() {
-                QueueName = "credit-card-refused-queue",
-                ProducerType = typeof(CreditCardRefusedEvent)
-            },
-            new() {
-                QueueName = "credit-card-created-queue",
-                ProducerType = typeof(CreditCardCreatedEvent)
-            },
+            new("credit-card-refused-queue", typeof(CreditCardRefusedEvent)),
+            new("credit-card-created-queue", typeof(CreditCardCreatedEvent))
         };
 
         services.AddMessageBus(producerConfigurations: producers, consumerConfigurations: consumers);

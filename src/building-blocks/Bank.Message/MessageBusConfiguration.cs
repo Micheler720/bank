@@ -1,8 +1,11 @@
+using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 using MassTransit;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Bank.Message;
+
+[ExcludeFromCodeCoverage]
 public static class MessageBusConfiguration
 {
     public static IServiceCollection AddMessageBus(

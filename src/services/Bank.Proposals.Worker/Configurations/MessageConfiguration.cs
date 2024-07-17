@@ -13,27 +13,14 @@ public static class MessageConfiguration
     {
         var consumers = new List<ConsumerConfiguration>
         {
-            new() {
-                QueueName = "client-registred-queue",
-                ConsumerType = typeof(ClientRegistredConsumer)
-            }
+            new("client-registred-queue", typeof(ClientRegistredConsumer))
         };
 
         var producers = new List<ProducerConfiguration>
         {
-            new() {
-                QueueName = "proposal-refused-queue",
-                ProducerType = typeof(ProposalRefusedEvent)
-            },
-            new() {
-                QueueName = "proposal-approved-queue",
-                ProducerType = typeof(ProposalApprovedEvent)
-            },
-            new() {
-                QueueName = "proposal-failed-queue",
-                ProducerType = typeof(ProposalFailedEvent)
-            },
-
+            new("proposal-refused-queue", typeof(ProposalRefusedEvent)),
+            new("proposal-approved-queue", typeof(ProposalApprovedEvent)),
+            new("proposal-failed-queue", typeof(ProposalFailedEvent))
         };
 
         services.AddMessageBus(producerConfigurations: producers, consumerConfigurations: consumers);

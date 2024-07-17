@@ -1,7 +1,9 @@
+using System.Diagnostics.CodeAnalysis;
 using MassTransit;
 
 namespace Bank.Message;
 
+[ExcludeFromCodeCoverage]
 public class MessageBus(IPublishEndpoint publishEndpoint) : IMessageBus
 {
     private readonly IPublishEndpoint _publishEndpoint = publishEndpoint;
