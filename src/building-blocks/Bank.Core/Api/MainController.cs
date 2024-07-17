@@ -1,9 +1,12 @@
+using System.Diagnostics.CodeAnalysis;
 using System.Net;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace Bank.Clients.Api.Controllers;
+namespace Bank.Core.Api;
+
+[ExcludeFromCodeCoverage]
 public abstract class MainController : ControllerBase
 {
     protected ICollection<string> Errors = new List<string>();

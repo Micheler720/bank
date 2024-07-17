@@ -2,6 +2,7 @@ using System.Net;
 using Bank.Clients.Api.Application.Commands;
 using Bank.Clients.Api.Application.DTO;
 using Bank.Clients.Api.Application.Queries;
+using Bank.Core.Api;
 using Bank.Core.Communication;
 using Bank.Core.Mediator;
 using Microsoft.AspNetCore.Mvc;
