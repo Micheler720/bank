@@ -52,10 +52,7 @@ public class ApplicationDbContext : DbContext, IUnitOfWork
     {
         UpdadteCreateAndUpdatedDate();
 
-        var sucess = await base.SaveChangesAsync() > 0;
-        if (sucess) await _mediatorHandler.PublishEvents(this);
-
-        return sucess;
+        return await base.SaveChangesAsync() > 0;
     }
 
     private void UpdadteCreateAndUpdatedDate()
@@ -77,30 +74,4 @@ public class ApplicationDbContext : DbContext, IUnitOfWork
         }
     }
 
-}
-
-[ExcludeFromCodeCoverage]
-public static class MediatorExtension
-{
-    public static async Task PublishEvents<T>(this IMediatorHandler mediator, T ctx) where T : DbContext
-    {
-        var entities = ctx.ChangeTracker
-            .Entries<Entity>()
-            .Where(x => x.Entity.Notifications != null && x.Entity.Notifications.Any());
-
-        var domainEvents = entities
-            .SelectMany(x => x.Entity!.Notifications!)
-            .ToList();
-
-        entities.ToList()
-            .ForEach(entity => entity.Entity.ClearEvents());
-
-        var tasks = domainEvents
-        .Select(async (domainEvent) =>
-        {
-            await mediator.PublishEvent(domainEvent);
-        });
-
-        await Task.WhenAll(tasks);
-    }
 }
