@@ -1,4 +1,5 @@
 using Bank.Core.Messages.Integration;
+using Bank.CreditCard.Worker.Exceptions;
 using Bank.Message;
 
 namespace Bank.CreditCard.Worker.Domain;
@@ -6,10 +7,14 @@ namespace Bank.CreditCard.Worker.Domain;
 public class CreditCardService : ICreditCardService
 {
     private readonly IMessageBus _messageBus;
+    private readonly ICreditCardRepository _creditCardRepository;
 
-    public CreditCardService(IMessageBus messageBus)
+    public CreditCardService(
+        IMessageBus messageBus,
+        ICreditCardRepository creditCardRepository)
     {
         _messageBus = messageBus;
+        _creditCardRepository = creditCardRepository;
     }
 
     public async Task CreateCreditCard(Guid clientId, string document, IEnumerable<decimal> aprovedsLimits)
@@ -28,11 +33,18 @@ public class CreditCardService : ICreditCardService
             var securityCode = new Random().Next(100, 999).ToString();
 
             return new CreditCardEntity(
-                id: Guid.NewGuid(),
+                clientId: clientId,
                 creditLimit: limit,
                 cardNumber: numberCreditCard,
                 securityCode: securityCode);
         }).ToList();
+
+        _creditCardRepository.AddRange(creditCards);
+
+        var success = await _creditCardRepository.UnitOfWork.CommitAsync();
+
+        if(!success)
+            throw new PersistDataException("Houve uma falha na persistencia dos cartões de crédito");        
 
         var creditCarCreatedEvent = new CreditCardCreatedEvent(
             clientId,

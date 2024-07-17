@@ -1,5 +1,7 @@
+using Bank.Core.Data;
 using Bank.Core.Messages.Integration;
 using Bank.CreditCard.Worker.Domain;
+using Bank.CreditCard.Worker.Exceptions;
 using Bank.Message;
 using Moq;
 using Moq.AutoMock;
@@ -11,6 +13,8 @@ public class CreditCardServiceTest
 {
     #region Mocks
     private readonly Mock<IMessageBus> _messageBusMock;
+    private readonly Mock<IUnitOfWork> _unitOfWorkMock;
+    private readonly Mock<ICreditCardRepository> _creditCardRepositoryMock;
     private readonly AutoMocker _mocker = new();
     #endregion
 
@@ -18,7 +22,12 @@ public class CreditCardServiceTest
 
     public CreditCardServiceTest()
     {
+        _unitOfWorkMock = _mocker.GetMock<IUnitOfWork>();
+        _unitOfWorkMock.Setup(x => x.CommitAsync()).ReturnsAsync(true);
+
         _messageBusMock = _mocker.GetMock<IMessageBus>();
+        _creditCardRepositoryMock = _mocker.GetMock<ICreditCardRepository>();
+        _creditCardRepositoryMock.SetupGet(x => x.UnitOfWork).Returns(_unitOfWorkMock.Object);
     }
 
     [Fact]
@@ -51,5 +60,25 @@ public class CreditCardServiceTest
         _messageBusMock.Verify(x => x.Publish(
             It.IsAny<CreditCardRefusedEvent>(), 
             It.IsAny<CancellationToken>()), Times.Once);
+    }
+
+    [Fact]
+    public async Task CreateCreditCard_ShouldException_WhenErroPersistData()
+    {
+        var creditCardService = _mocker.CreateInstance<CreditCardService>();
+       
+        _creditCardRepositoryMock.Setup(x => x.UnitOfWork.CommitAsync())
+            .ReturnsAsync(false);
+        
+        await Assert.ThrowsAsync<PersistDataException>(() =>
+            creditCardService.CreateCreditCard(Guid.NewGuid(), "15345678", _approvedLimits)); 
+
+        _messageBusMock.Verify(x => x.Publish(
+            It.IsAny<CreditCardCreatedEvent>(), 
+            It.IsAny<CancellationToken>()), Times.Never);
+
+        _messageBusMock.Verify(x => x.Publish(
+            It.IsAny<CreditCardRefusedEvent>(), 
+            It.IsAny<CancellationToken>()), Times.Never);
     }
 }
