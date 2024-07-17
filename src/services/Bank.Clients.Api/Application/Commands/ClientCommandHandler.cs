@@ -14,7 +14,15 @@ public class ClientCommandHandler(IClientRepository clientRepository) : CommandH
     {
         if(!request.IsValid()) return request.ValidationResult;   
 
-        var client = new Client(
+        var client = await _clientRepository.GetByDocument(request.Document!);
+
+        if (client != null)
+        {
+            AddError("Documento já cadastrado.");
+            return ValidationResult;
+        }
+
+        client = new Client(
             name: request.Name!, 
             birthDate: request.BirthDate,
             document:request.Document!, 

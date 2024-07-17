@@ -24,6 +24,12 @@ public class ClientCommandHandlerTest
         SolicitedLimit =  20000
     };
 
+    private readonly Client _client = new Client(
+        name: "Name",
+        birthDate: new DateTime(1999, 10, 10),
+        document: "12345678910",
+        email: "XXXXXXXXXXXXXXX");
+
     public ClientCommandHandlerTest()
     {
         _unitOfWorkMock = _mocker.GetMock<IUnitOfWork>();
@@ -46,7 +52,7 @@ public class ClientCommandHandlerTest
     }
 
     [Fact]
-    public async Task Handle_should_invali_when_command_invalid()
+    public async Task Handle_should_invalid_when_command_invalid()
     {
         var handler = _mocker.CreateInstance<ClientCommandHandler>();
         _command.Email = "invalid";
@@ -54,6 +60,23 @@ public class ClientCommandHandlerTest
         var result = await handler.Handle(_command, CancellationToken.None);
         
         Assert.False(result.IsValid);
+
+        _clientRepositoryMock.Verify(x => x.Add(It.IsAny<Client>()), Times.Never);
+    }
+
+    [Fact]
+    public async Task Handle_should_invalid_when_client_registred()
+    {
+        var handler = _mocker.CreateInstance<ClientCommandHandler>();
+        _clientRepositoryMock.Setup(x => 
+            x.GetByDocument(It.IsAny<string>())).ReturnsAsync(_client);
+        
+        var result = await handler.Handle(_command, CancellationToken.None);
+        
+        var errorMessage = result.Errors.First().ErrorMessage;
+        
+        Assert.False(result.IsValid);
+        Assert.Equal("Documento já cadastrado.", errorMessage);
 
         _clientRepositoryMock.Verify(x => x.Add(It.IsAny<Client>()), Times.Never);
     }
