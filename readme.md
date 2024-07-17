@@ -17,6 +17,7 @@ Projeto desenvolvido para cadastro de clientes, propostas de crédito e geraçã
     - [Comandos](#comandos)
 - [Configuração](#configuração)
 - [Testes](#testes)
+- [Cenários Testes Aplicação](#cenários-testes-aplicação)
 - [Contato](#contato)
 
 ## Visão Geral
@@ -111,6 +112,16 @@ cd src/tests/Bank.tests
 # Execute a aplicação
 dotnet test
 ```
+
+## Cenários testes Aplicação
+
+Cenários para testes de comportamento da aplicação:
+
+- **Reprovação Propostas de Crédito:** documentos de iniciados com 11 sempre retornarão resultado reprovado na proposta de crédito.
+- **Reprovação Cartão Crédito:** documentos de iniciados com 12 sempre retornarão resultado reprovado na criação do cartão do crédito.
+- **Falha no processamento de Propostas de créditos:** documentos de iniciados com 22 sempre retornarão falha no consumo de uma score, cenário de reprocessamento 5 vezes.
+
+** Demais documentos retornarão resultados aprovados. 
 
 ## Contato
 
