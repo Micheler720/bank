@@ -41,7 +41,7 @@ public class ClientController : MainController
         if(client == null)
             return CustomResponse(httpStatusCode: HttpStatusCode.NoContent);
 
-        return CustomResponse(await _clientQuery.GetByDocument(document));
+        return CustomResponse(client);
     }
 
 }

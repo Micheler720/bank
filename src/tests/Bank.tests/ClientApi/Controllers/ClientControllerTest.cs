@@ -73,6 +73,8 @@ public class ClientControllerTest
         Assert.Equal(_clientDto.Name, client.Name);
         Assert.Equal(_clientDto.BirthDate, client.BirthDate);
         Assert.Equal(_clientDto.Document, client.Document);
+        
+        _clientQueryMock.Verify(x => x.GetByDocument(document), Times.Once);
     }
 
     [Fact]
@@ -89,5 +91,6 @@ public class ClientControllerTest
 
         Assert.Equal((int)HttpStatusCode.NoContent, result!.StatusCode);
 
+        _clientQueryMock.Verify(x => x.GetByDocument(document), Times.Once);
     }
 }
