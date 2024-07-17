@@ -26,7 +26,7 @@ public class ProposalApprovedConsumer :
         await _creditCardService.CreateCreditCard(
             message.Data.ClientId, 
             message.Data.Document, 
-            message.Data.ApprovedLimit);
+            message.Data.ApprovedLimits);
 
     }
 }

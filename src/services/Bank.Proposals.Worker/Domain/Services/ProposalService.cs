@@ -37,11 +37,18 @@ public class ProposalService : IProposalService
             return;
        }
 
+       var approvedLimits = new decimal[]
+       {
+            1000,
+            2000,
+            3000
+       };
+
        var proposalApprovedEvent = new ProposalApprovedEvent
        (
            proposal.Document,
            proposal.ClientId,
-           proposal.SolicitedLimit
+           approvedLimits
        );
 
        await _messageBus.Publish(proposalApprovedEvent);

@@ -12,26 +12,32 @@ public class CreditCardService : ICreditCardService
         _messageBus = messageBus;
     }
 
-    public async Task CreateCreditCard(Guid clientId, string document, decimal approvedLimit)
+    public async Task CreateCreditCard(Guid clientId, string document, IEnumerable<decimal> aprovedsLimits)
     {
         var raizDocument = document[..2];
 
-        if(raizDocument == "12")
+        if (raizDocument == "12")
         {
             await _messageBus.Publish(new CreditCardRefusedEvent(clientId, "Houve uma falha na criação do cartão de crédito"));
             return;
         }
 
-        var numberCreditCard = Guid.NewGuid().ToString().Substring(0, 16);
-        var securityCode = new Random().Next(100, 999).ToString();
+        var creditCards = aprovedsLimits.Select(limit =>
+        {
+            var numberCreditCard = Guid.NewGuid().ToString().Substring(0, 16);
+            var securityCode = new Random().Next(100, 999).ToString();
+
+            return new CreditCardEntity(
+                id: Guid.NewGuid(),
+                creditLimit: limit,
+                cardNumber: numberCreditCard,
+                securityCode: securityCode);
+        }).ToList();
 
         var creditCarCreatedEvent = new CreditCardCreatedEvent(
-            clientId, 
+            clientId,
             message: "Limite crédito aprovado.",
-            creditLimit: approvedLimit,
-            cardNumber: numberCreditCard,
-            securityCode: securityCode,
-            creditCardId: Guid.NewGuid());
+            creditLimit: aprovedsLimits.Sum());
 
         await _messageBus.Publish(creditCarCreatedEvent);
     }

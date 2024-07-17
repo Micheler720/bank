@@ -14,6 +14,8 @@ public class CreditCardServiceTest
     private readonly AutoMocker _mocker = new();
     #endregion
 
+    private readonly List<decimal> _approvedLimits = new() { 20000 };
+
     public CreditCardServiceTest()
     {
         _messageBusMock = _mocker.GetMock<IMessageBus>();
@@ -24,7 +26,7 @@ public class CreditCardServiceTest
     {
         var creditCardService = _mocker.CreateInstance<CreditCardService>();
         
-        await creditCardService.CreateCreditCard(Guid.NewGuid(), "15345678", 20000);
+        await creditCardService.CreateCreditCard(Guid.NewGuid(), "15345678", _approvedLimits);
 
         _messageBusMock.Verify(x => x.Publish(
             It.IsAny<CreditCardCreatedEvent>(), 
@@ -40,7 +42,7 @@ public class CreditCardServiceTest
     {
         var creditCardService = _mocker.CreateInstance<CreditCardService>();
         
-        await creditCardService.CreateCreditCard(Guid.NewGuid(), "12345678", 20000);
+        await creditCardService.CreateCreditCard(Guid.NewGuid(), "12345678", _approvedLimits);
 
         _messageBusMock.Verify(x => x.Publish(
             It.IsAny<CreditCardCreatedEvent>(), 

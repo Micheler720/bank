@@ -27,10 +27,7 @@ public class CreditCardCreatedConsumerTest
     private readonly CreditCardCreatedEvent _creditCardCreatedEvent = new CreditCardCreatedEvent(
         Guid.NewGuid(),
         "Aproved",
-        20000,
-        "1234 5678 91029",
-        "123",
-        Guid.NewGuid());
+        20000);
 
     public CreditCardCreatedConsumerTest()
     {
