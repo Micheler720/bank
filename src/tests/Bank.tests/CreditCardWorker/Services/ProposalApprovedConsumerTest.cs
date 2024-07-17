@@ -45,7 +45,7 @@ public class ProposalApprovedConsumerTest
         _creditCardServiceMock.Verify(x => x.CreateCreditCard(
             It.IsAny<Guid>(), 
             It.IsAny<string>(), 
-            It.IsAny<List<decimal>>()), Times.Once);
+            It.IsAny<decimal[]>()), Times.Once);
 
         _messageBusMock.Verify(x => x.Publish(
             It.IsAny<ProposalFailedEvent>(), 
