@@ -8,6 +8,7 @@
       "RABBITMQ_HOST": "127.0.0.1",
       "RABBITMQ_USER": "guest",
       "RABBITMQ_PASSWORD": "guest",
+      "CONNECTION_STRING_DATABASE": "Server=127.0.0.1;Port=5433;Database=bank;User Id=postgres;enlist=true;Password=Bank@2024;",
       "sslPort": 44357
     }
   },
@@ -23,6 +24,7 @@
         "RABBITMQ_HOST": "127.0.0.1",
         "RABBITMQ_USER": "guest",
         "RABBITMQ_PASSWORD": "guest",
+        "CONNECTION_STRING_DATABASE": "Server=127.0.0.1;Port=5433;Database=bank;User Id=postgres;enlist=true;Password=Bank@2024;",
       }
     },
     "https": {
@@ -36,6 +38,7 @@
         "RABBITMQ_HOST": "127.0.0.1",
         "RABBITMQ_USER": "guest",
         "RABBITMQ_PASSWORD": "guest",
+        "CONNECTION_STRING_DATABASE": "Server=127.0.0.1;Port=5433;Database=bank;User Id=postgres;enlist=true;Password=Bank@2024;",
       }
     },
     "IIS Express": {
@@ -47,6 +50,7 @@
         "RABBITMQ_HOST": "127.0.0.1",
         "RABBITMQ_USER": "guest",
         "RABBITMQ_PASSWORD": "guest",
+        "CONNECTION_STRING_DATABASE": "Server=127.0.0.1;Port=5433;Database=bank;User Id=postgres;enlist=true;Password=Bank@2024;",
       }
     }
   }
