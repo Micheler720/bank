@@ -9,7 +9,7 @@ using Xunit;
 
 namespace Bank.tests.ClientApi.Services;
 
-public class ProposalRefusedConsumerTest
+public class ProposalFailedConsumerTest
 {
     #region Mocks
     private readonly Mock<IClientRepository> _clientRepositoryMock;
@@ -22,13 +22,12 @@ public class ProposalRefusedConsumerTest
         birthDate: new DateTime(1999, 10, 10),
         document: "12345678910",
         email: "XXXXXXXXXXXXXXX");
-    
-    private readonly ProposalRefusedEvent _event = new ProposalRefusedEvent(
-        Guid.NewGuid(),
-        Guid.NewGuid(),
-        "Refused");
 
-    public ProposalRefusedConsumerTest()
+    private readonly ProposalFailedEvent _event = new ProposalFailedEvent(
+        Guid.NewGuid(),
+        "Failed");
+
+    public ProposalFailedConsumerTest()
     {
         _unitOfWorkMock = _mocker.GetMock<IUnitOfWork>();
         _unitOfWorkMock.Setup(x => x.CommitAsync()).ReturnsAsync(true);
@@ -41,17 +40,19 @@ public class ProposalRefusedConsumerTest
     }
 
     [Fact]
-    public async Task Consume_WhenCalled_CreditCardRefuserd()
+    public async Task Consume_WhenCalled_ShouldFailedProposal()
     {
-        var consumer = _mocker.CreateInstance<ProposalRefusedConsumer>(); 
+        var consumer = _mocker.CreateInstance<ProposalFailedConsumer>();
         
         var consumedMessage = 
-            new ConsumedMessage<ProposalRefusedEvent>(_event);
+            new ConsumedMessage<ProposalFailedEvent>(_event);
 
         await consumer.ConsumeMessage(consumedMessage);
 
         _clientRepositoryMock.Verify(x => x.GetById(It.IsAny<Guid>()), Times.Once);
-        _clientRepositoryMock.Verify(x => x.Update(It.Is<Client>(c => c.ProposalStatus == ProposalStatus.Refused)), Times.Once);
+        _clientRepositoryMock.Verify(x => x.Update(It.IsAny<Client>()), Times.Once);
+        _clientRepositoryMock.Verify(x => x.Update(It.Is<Client>(c => c.ProposalStatus == ProposalStatus.FailedProposal)), Times.Once);
+        _clientRepositoryMock.Verify(x => x.Update(It.Is<Client>(c => c.CreditLimit == 0)), Times.Once);
     }
 
     [Fact]
@@ -60,10 +61,10 @@ public class ProposalRefusedConsumerTest
         _clientRepositoryMock.Setup(x => x.GetById(It.IsAny<Guid>()))
             .ReturnsAsync((Client)null!);
 
-        var consumer = _mocker.CreateInstance<ProposalRefusedConsumer>();
+        var consumer = _mocker.CreateInstance<ProposalFailedConsumer>();
         
         var consumedMessage = 
-            new ConsumedMessage<ProposalRefusedEvent>(_event);
+            new ConsumedMessage<ProposalFailedEvent>(_event);
 
         var ex = await Assert.ThrowsAsync<MessageConsumedException>(() => consumer.ConsumeMessage(consumedMessage));
 

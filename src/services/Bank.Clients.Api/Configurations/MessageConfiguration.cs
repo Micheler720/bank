@@ -14,6 +14,7 @@ public static class MessageConfiguration
         var consumers = new List<ConsumerConfiguration>
         {
             new ("proposal-refused-queue", typeof(ProposalRefusedConsumer)),
+            new ("proposal-failed-queue", typeof(ProposalFailedConsumer)),
             new ("credit-card-created-queue", typeof(CreditCardCreatedConsumer)),
             new ("credit-card-refused-queue", typeof(CreditCardRefusedConsumer))
         };

@@ -4,7 +4,6 @@ using Bank.Clients.Api.Services;
 using Bank.Core.Data;
 using Bank.Core.Messages.Integration;
 using Bank.Message;
-using MassTransit;
 using Moq;
 using Moq.AutoMock;
 using Xunit;
